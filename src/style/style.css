@@ -223,6 +223,7 @@ content .about-us__partners div {
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  margin: 0;
 }
 
 #app {
