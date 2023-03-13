@@ -111,5 +111,10 @@ content {
     div {
       margin: 0 26px;
     }
+    img {
+      filter: grayscale(100%) contrast(0%) brightness(100%);
+      // filter: contrast(0%);
+      // filter: brightness(5%);
+    }
   }
 }

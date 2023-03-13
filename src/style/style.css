@@ -221,6 +221,9 @@ content .about-us__partners {
 content .about-us__partners div {
   margin: 0 26px;
 }
+content .about-us__partners img {
+  filter: grayscale(100%) contrast(0%) brightness(100%);
+}
 
 .how-we-work {
   display: flex;
