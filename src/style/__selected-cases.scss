@@ -1,0 +1,160 @@
+.selected-cases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+  height: 2000px;
+  border: black 1px solid;
+}
+.selected-cases__title {
+  width: 1232px;
+  height: fit-content;
+  margin-top: 120px;
+  margin-bottom: 48px;
+
+  h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+  }
+}
+
+.selected-cases__content {
+  display: flex;
+  flex-direction: column;
+  width: 1280px;
+  height: auto;
+
+  .selected-cases__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+
+    margin: 24px;
+    .selected-cases__text {
+      h2 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 38px;
+        color: $white;
+        margin: 0;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: $white;
+        margin: 0;
+        margin-top: 16px;
+        line-height: 24px;
+      }
+    }
+    .selected-cases__logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+    }
+  }
+  .selected-cases__top_content {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .selected-cases__top_content__left {
+      width: 632px;
+      height: 600px;
+      background: url(/src/images/am-img.png);
+
+      .selected-cases__am-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        .selected-cases__wrapper {
+          height: 100%;
+          p {
+            width: 524px;
+          }
+        }
+      }
+    }
+    .selected-cases__top_content__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 632px;
+      height: 600px;
+
+      .selected-cases__rzd_block {
+        display: flex;
+        flex-direction: row;
+        height: 292px;
+        background-color: $gray-light;
+
+        .selected-cases__rzd-img {
+          width: 530px;
+          background: url(/src/images/rzd-img.png);
+        }
+        .selected-cases__wrapper {
+          h2 {
+            color: $secondary;
+          }
+          p {
+            color: $secondary;
+          }
+        }
+      }
+      .selected-cases__declarant_block {
+        width: 100%;
+        background-color: beige;
+        height: 292px;
+        background: url(/src/images/declarant-img.png);
+        .selected-cases__wrapper {
+          height: 87%;
+          h2 {
+          }
+          p {
+          }
+        }
+      }
+    }
+  }
+  .selected-cases__bottom_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+    .selected-cases__ice-palace {
+      width: 416px;
+      height: 424px;
+      background: url(/src/images/ica-palace-img.png);
+    }
+    .selected-cases__cryptonator {
+      width: 416px;
+      height: 424px;
+      background: url(/src/images/cryptonator-img.png);
+    }
+    .selected-cases__add {
+      width: 416px;
+      height: 424px;
+      background-color: $secondary;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .selected-cases__add-wrapper {
+        width: 272px;
+        height: 124px;
+        text-align: center;
+        h3 {
+          font-size: 20px;
+          font-weight: 400;
+          color: $white;
+        }
+      }
+    }
+  }
+}
