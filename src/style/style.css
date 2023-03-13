@@ -85,7 +85,7 @@
   justify-content: center;
   align-items: center;
   width: 720px;
-  background-image: url(/src/images/welcome-screen.png);
+  background-image: url(../images/welcome-screen.png);
 }
 
 .welcome-screen__buttons {
@@ -440,7 +440,7 @@ content .about-us__partners div {
 .selected-cases__content .selected-cases__top_content .selected-cases__top_content__left {
   width: 632px;
   height: 600px;
-  background: url(/src/images/am-img.png);
+  background-image: url(../images/am-img.png);
 }
 .selected-cases__content .selected-cases__top_content .selected-cases__top_content__left .selected-cases__am-block {
   display: flex;
@@ -470,7 +470,7 @@ content .about-us__partners div {
 }
 .selected-cases__content .selected-cases__top_content .selected-cases__top_content__right .selected-cases__rzd_block .selected-cases__rzd-img {
   width: 530px;
-  background: url(/src/images/rzd-img.png);
+  background-image: url(../images/rzd-img.png);
 }
 .selected-cases__content .selected-cases__top_content .selected-cases__top_content__right .selected-cases__rzd_block .selected-cases__wrapper h2 {
   color: #14213d;
@@ -482,7 +482,7 @@ content .about-us__partners div {
   width: 100%;
   background-color: beige;
   height: 292px;
-  background: url(/src/images/declarant-img.png);
+  background-image: url(../images/declarant-img.png);
 }
 .selected-cases__content .selected-cases__top_content .selected-cases__top_content__right .selected-cases__declarant_block .selected-cases__wrapper {
   height: 87%;
@@ -496,12 +496,12 @@ content .about-us__partners div {
 .selected-cases__content .selected-cases__bottom_content .selected-cases__ice-palace {
   width: 416px;
   height: 424px;
-  background: url(/src/images/ica-palace-img.png);
+  background-image: url(../images/ice-palace-img.png);
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
   width: 416px;
   height: 424px;
-  background: url(/src/images/cryptonator-img.png);
+  background-image: url(../images/cryptonator-img.png);
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__add {
   width: 416px;
