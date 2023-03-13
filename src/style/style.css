@@ -29,7 +29,7 @@
 }
 .header .header__wrapper div:hover {
   border-bottom: solid 3px #fca311;
-  margin-top: -3px;
+  margin-bottom: -3px;
 }
 .header .header__wrapper .header__brand {
   width: 130px;
