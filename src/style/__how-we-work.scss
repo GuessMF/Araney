@@ -1,12 +1,12 @@
 .how-we-work {
   width: 1440px;
   height: 900px;
-  border: black 1px solid;
   background-color: $secondary;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border: none;
 
   .how-we-work__left-wrapper {
     width: 600px;

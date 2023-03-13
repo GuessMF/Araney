@@ -4,6 +4,7 @@
   background: linear-gradient(103.2deg, #14213d 0%, #28427b 111.47%);
   display: flex;
   flex-direction: row;
+  border: none;
 }
 
 .welcome-screen__left-box {
@@ -15,14 +16,12 @@
   width: 720px;
   .welcome-screen__info {
     flex-direction: column;
-
     align-items: center;
     width: 456px;
     height: 234px;
     margin-left: 150px;
   }
   .welcome-screen__title {
-    // margin-bottom: 12px;
     h1 {
       font-size: 40px;
       font-weight: 700;

@@ -1,12 +1,196 @@
 .discuss {
   width: 1440px;
-  height: 1200px;
-  border: black 1px solid;
-  background-color: antiquewhite;
+  height: fit-content;
   .discuss__wrapper {
     width: 1280px;
     height: 668px;
-    border: black 1px solid;
+
     margin: 96px auto;
+    display: flex;
+    flex-direction: row;
+
+    .discuss__left-box {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .discuss__text {
+        width: 524px;
+
+        h2 {
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 38px;
+          margin-top: 0;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 30px;
+        }
+      }
+      .discuss__img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    .discuss__right-box {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $grey-form;
+      .discuss__content {
+        width: 584px;
+        height: 560px;
+        .discuss__form_title {
+          h3 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: left;
+            color: $dark-grey;
+          }
+        }
+        .discuss__form_input {
+          margin-top: 3px;
+          width: 284px;
+          height: 48px;
+          border-radius: 0px;
+          border: 1px $gray solid;
+          background-color: $white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .discuss__form_top {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-top: 24px;
+          p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+
+          input {
+            width: 260px;
+            height: 24px;
+            border-radius: 0px;
+            border: none;
+            // border: 1px $gray solid;
+          }
+          .discuss__form_left {
+            width: 284px;
+            // height: 48px;
+            //  border: black 1px solid;
+          }
+          .discuss__form_right {
+            width: 284px;
+            // height: 48px;
+            //   border: black 1px solid;
+          }
+        }
+        .discuss__form_middle {
+          margin-top: 16px;
+          p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $secondary;
+          }
+          .discuss__form_input {
+            width: 100%;
+          }
+          input {
+            width: 560px;
+            height: 50%;
+            border-radius: 0px;
+            border: none;
+          }
+        }
+        .discuss__form_bottom {
+          //   border: black 1px solid;
+          margin-top: 16px;
+          p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $secondary;
+          }
+          .discuss__form_input {
+            width: 100%;
+            height: 174px;
+          }
+          textarea {
+            width: 560px;
+            height: 150px;
+            border: none;
+            resize: none;
+            color: $gray;
+          }
+        }
+        .discuss__form_add {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          height: 38px;
+          margin-top: 16px;
+          p {
+            width: fit-content;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 8px;
+          }
+          img {
+            width: 20px;
+            height: 20px;
+            margin-top: 0;
+            filter: invert(100%);
+          }
+        }
+        .discuss__form_button {
+          width: 100%;
+          margin-top: 20px;
+          button {
+            width: 100%;
+            height: 48px;
+            background-color: $orange;
+            border: none;
+            color: $white;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+          }
+        }
+      }
+
+      .discuss__policy {
+        width: 584px;
+        height: 36px;
+
+        margin-top: 24px;
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          margin-top: 0;
+          a {
+            color: $orange;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 }

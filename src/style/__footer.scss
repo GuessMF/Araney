@@ -1,0 +1,40 @@
+.footer {
+  width: 1440px;
+  height: 235px;
+  background-color: $secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .footer__wrapper {
+    width: 1280px;
+    height: fit-content;
+    margin: 50px 80px;
+
+    .footer__email {
+      h2 {
+        margin: 0;
+        color: $white;
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+    .footer__bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 47px;
+      .footer__info {
+        p {
+          color: $footer-grey;
+        }
+      }
+      .footer__year {
+        p {
+          color: $footer-grey;
+        }
+      }
+    }
+  }
+}
