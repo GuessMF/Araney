@@ -55,16 +55,15 @@
     }
   }
   .selected-cases__top_content {
-    width: 100%;
-    height: 600px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    height: 600px;
 
     .selected-cases__top_content__left {
       width: 632px;
       height: 600px;
-
       background-image: url(../images/am-img.png);
 
       .selected-cases__am-block {
@@ -73,6 +72,7 @@
         justify-content: space-between;
         width: 100%;
         height: 100%;
+
         .selected-cases__wrapper {
           height: 100%;
           p {
@@ -138,13 +138,14 @@
       background-image: url(../images/cryptonator-img.png);
     }
     .selected-cases__add {
-      width: 416px;
-      height: 424px;
-      background-color: $secondary;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 416px;
+      height: 424px;
+      background-color: $secondary;
+
       .selected-cases__add-wrapper {
         width: 272px;
         height: 124px;

@@ -1,19 +1,20 @@
 .discuss {
   width: 1440px;
   height: fit-content;
-  .discuss__wrapper {
-    width: 1280px;
-    height: 668px;
 
-    margin: 96px auto;
+  .discuss__wrapper {
     display: flex;
     flex-direction: row;
+    width: 1280px;
+    height: 668px;
+    margin: 96px auto;
 
     .discuss__left-box {
-      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      width: 50%;
+
       .discuss__text {
         width: 524px;
 
@@ -36,15 +37,17 @@
       }
     }
     .discuss__right-box {
-      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 50%;
       background-color: $grey-form;
+
       .discuss__content {
         width: 584px;
         height: 560px;
+
         .discuss__form_title {
           h3 {
             font-size: 20px;
@@ -57,22 +60,23 @@
           }
         }
         .discuss__form_input {
-          margin-top: 3px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           width: 284px;
           height: 48px;
           border-radius: 0px;
           border: 1px $gray solid;
           background-color: $white;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          margin-top: 3px;
         }
         .discuss__form_top {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           margin-top: 24px;
+
           p {
             margin: 0;
             font-size: 14px;
@@ -85,17 +89,12 @@
             height: 24px;
             border-radius: 0px;
             border: none;
-            // border: 1px $gray solid;
           }
           .discuss__form_left {
             width: 284px;
-            // height: 48px;
-            //  border: black 1px solid;
           }
           .discuss__form_right {
             width: 284px;
-            // height: 48px;
-            //   border: black 1px solid;
           }
         }
         .discuss__form_middle {
@@ -118,7 +117,6 @@
           }
         }
         .discuss__form_bottom {
-          //   border: black 1px solid;
           margin-top: 16px;
           p {
             margin: 0;
