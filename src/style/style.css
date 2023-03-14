@@ -12,7 +12,8 @@
 @media (max-width: 1439px) {
   .header {
     background-color: aquamarine;
-    width: 1100px;
+    width: 90vw;
+    margin: 0 auto;
   }
 }
 .header .header__wrapper {
@@ -64,7 +65,7 @@
 }
 @media (max-width: 1439px) {
   .welcome-screen {
-    width: 1280px;
+    width: 100vw;
   }
 }
 
@@ -76,12 +77,22 @@
   width: 720px;
   color: #ffffff;
 }
+@media (max-width: 1439px) {
+  .welcome-screen__left-box {
+    width: 50%;
+  }
+}
 .welcome-screen__left-box .welcome-screen__info {
   flex-direction: column;
   align-items: center;
   width: 456px;
   height: 234px;
   margin-left: 150px;
+}
+@media (max-width: 1439px) {
+  .welcome-screen__left-box {
+    width: 50%;
+  }
 }
 .welcome-screen__left-box .welcome-screen__title h1 {
   font-size: 40px;
@@ -101,6 +112,11 @@
   align-items: center;
   width: 720px;
   background-image: url(../images/welcome-screen.png);
+}
+@media (max-width: 1439px) {
+  .welcome-screen__picture {
+    width: 50%;
+  }
 }
 
 .welcome-screen__buttons {
@@ -129,11 +145,13 @@
   width: 1440px;
   height: 877px;
   border: none;
+  display: none;
   border: black 1px solid;
 }
 @media (max-width: 1439px) {
   .about-us {
     width: 1280px;
+    margin: 0 auto;
   }
 }
 
@@ -148,11 +166,21 @@ content {
   margin: 0 auto;
   color: #14213d;
 }
+@media (max-width: 1439px) {
+  content {
+    width: 90vw;
+  }
+}
 content .about-us__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 96px 0 16px 0;
+}
+@media (max-width: 1439px) {
+  content .about-us__header {
+    width: 100%;
+  }
 }
 content .about-us__header .about-us__text {
   width: 848px;
@@ -176,10 +204,21 @@ content .about-us__header .about-us__logo-box {
   margin-left: 16px;
   background-color: #14213d;
 }
+@media (max-width: 1439px) {
+  content .about-us__header .about-us__logo-box {
+    width: 50%;
+  }
+}
 content .about-us__middle {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+@media (max-width: 1439px) {
+  content .about-us__middle {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 content .about-us__middle div {
   display: flex;
@@ -205,15 +244,35 @@ content .about-us__middle .about-us__icon {
   flex-direction: row;
   justify-content: end;
 }
+@media (max-width: 1439px) {
+  content .about-us__middle .about-us__icon {
+    width: 100%;
+  }
+}
 content .about-us__middle .about-us__first-box {
   border: #f2f2f2 2px solid;
+}
+@media (max-width: 1439px) {
+  content .about-us__middle .about-us__first-box {
+    width: 30%;
+  }
 }
 content .about-us__middle .about-us__second-box {
   border: #f2f2f2 2px solid;
   margin: 0 16px;
 }
+@media (max-width: 1439px) {
+  content .about-us__middle .about-us__second-box {
+    width: 30%;
+  }
+}
 content .about-us__middle .about-us__third-box {
   border: #f2f2f2 2px solid;
+}
+@media (max-width: 1439px) {
+  content .about-us__middle .about-us__third-box {
+    width: 30%;
+  }
 }
 content .about-us__subtitle {
   width: 100%;
