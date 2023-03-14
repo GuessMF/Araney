@@ -1,7 +1,13 @@
 .discuss {
   width: 1440px;
   height: fit-content;
-  display: none;
+  //display: none;
+  @media (max-width: 1439px) {
+    width: 100vw;
+  }
+  @media (max-width: 1280px) {
+    margin: 0 auto;
+  }
 
   .discuss__wrapper {
     display: flex;
@@ -9,13 +15,21 @@
     width: 1280px;
     height: 668px;
     margin: 96px auto;
+    @media (max-width: 1280px) {
+      flex-direction: column;
+      align-items: center;
+      height: fit-content;
+      width: 90vw;
+    }
 
     .discuss__left-box {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       width: 50%;
-
+      @media (max-width: 1280px) {
+        width: fit-content;
+      }
       .discuss__text {
         width: 524px;
 
@@ -44,7 +58,10 @@
       align-items: center;
       width: 50%;
       background-color: $grey-form;
-
+      @media (max-width: 1280px) {
+        padding: 20px;
+        width: fit-content;
+      }
       .discuss__content {
         width: 584px;
         height: 560px;

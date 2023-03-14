@@ -22,7 +22,12 @@
   // &::-webkit-scrollbar {
   //   width: 0;
   // }
-  display: none;
+  //display: none;
+  @media (max-width: 1439px) {
+    width: 100vw;
+    margin: 0 auto;
+    justify-content: center;
+  }
 
   .how-we-work__wrapper {
     display: flex;
@@ -34,9 +39,23 @@
     margin-top: 64px;
     margin-left: 80px;
     //  border: #f2f2f2 1px solid;
+    @media (max-width: 1439px) {
+      margin: 32px auto;
+    }
+    @media (max-width: 1280px) {
+      width: 90vw;
+    }
+
     .how-we-work__block {
       width: 600px;
       margin-right: 100px;
+      @media (max-width: 1439px) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      @media (max-width: 1280px) {
+        width: 50vw;
+      }
 
       .how-we-work__title {
         h1 {
@@ -57,6 +76,9 @@
           font-size: 20px;
           line-height: 30px;
           font-weight: 400;
+          @media (max-width: 1280px) {
+            width: 80%;
+          }
         }
       }
     }
@@ -67,10 +89,17 @@
       justify-content: center;
       margin-right: 100px;
       //  border: #f2f2f2 1px solid;
+      @media (max-width: 1280px) {
+        width: 50vw;
+      }
+
       .how-we-work__text {
         width: 552px;
-
         margin: 24px;
+        @media (max-width: 1280px) {
+          width: 90%;
+        }
+
         span {
           color: $orange;
           font-size: 20px;
@@ -96,16 +125,28 @@
     }
     .description {
       // display: none;
+      @media (max-width: 1280px) {
+        width: 50vw;
+      }
     }
     .step-1 {
       // display: none;
+      @media (max-width: 1280px) {
+        margin-right: 0;
+      }
     }
     .step-2 {
-      // display: none;
+      @media (max-width: 1439px) {
+        display: none !important;
+      }
     }
     .step-3 {
+      @media (max-width: 1439px) {
+        display: none !important;
+      }
     }
     .step-4 {
+      display: none !important;
       margin-right: 50px;
     }
   }

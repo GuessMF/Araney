@@ -35,7 +35,7 @@ const options = {
 // };
 // const observer = new IntersectionObserver(callback, options);
 
-observer.observe(target);
+//observer.observe(target);
 
 const addButton = document.querySelector(".selected-cases__add");
 const bicycleCity = document.querySelector(".selected-cases__bicycle-city");

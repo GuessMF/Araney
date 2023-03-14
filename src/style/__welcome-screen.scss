@@ -5,11 +5,12 @@
   height: 700px;
   background: linear-gradient(103.2deg, #14213d 0%, #28427b 111.47%);
   border: none;
-  //  display: none;
+  //display: none;
   @media (max-width: 1439px) {
     //width: 100%;
     width: 100vw;
     // width: 1000px;
+    margin: 0 auto;
   }
 }
 

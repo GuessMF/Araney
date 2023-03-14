@@ -6,12 +6,18 @@
   width: 1440px;
   height: 235px;
   background-color: $secondary;
-  display: none;
+  // display: none;
+  @media (max-width: 1439px) {
+    width: 100vw;
+  }
 
   .footer__wrapper {
     width: 1280px;
     height: fit-content;
     margin: 50px 80px;
+    @media (max-width: 1280px) {
+      width: 90vw;
+    }
 
     .footer__email {
       h2 {
