@@ -5,6 +5,10 @@
   height: 700px;
   background: linear-gradient(103.2deg, #14213d 0%, #28427b 111.47%);
   border: none;
+  // display: none;
+  @media (max-width: 1439px) {
+    width: 1280px;
+  }
 }
 
 .welcome-screen__left-box {

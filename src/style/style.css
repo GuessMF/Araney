@@ -4,11 +4,16 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
   width: 100%;
   height: 80px;
   padding: 16px 80px;
   border: none;
+}
+@media (max-width: 1439px) {
+  .header {
+    background-color: aquamarine;
+    width: 1100px;
+  }
 }
 .header .header__wrapper {
   display: flex;
@@ -26,6 +31,10 @@
   align-items: center;
   height: 100%;
   padding: 12px 24px;
+}
+.header .header__wrapper div a {
+  text-decoration: none;
+  color: #1c2e54;
 }
 .header .header__wrapper div:hover {
   border-bottom: solid 3px #fca311;
@@ -52,6 +61,11 @@
   height: 700px;
   background: linear-gradient(103.2deg, #14213d 0%, #28427b 111.47%);
   border: none;
+}
+@media (max-width: 1439px) {
+  .welcome-screen {
+    width: 1280px;
+  }
 }
 
 .welcome-screen__left-box {
@@ -115,6 +129,12 @@
   width: 1440px;
   height: 877px;
   border: none;
+  border: black 1px solid;
+}
+@media (max-width: 1439px) {
+  .about-us {
+    width: 1280px;
+  }
 }
 
 content {
@@ -227,64 +247,75 @@ content .about-us__partners img {
 
 .how-we-work {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   width: 1440px;
   height: 900px;
   background-color: #14213d;
   border: none;
+  display: none;
 }
-.how-we-work .how-we-work__left-wrapper {
+.how-we-work .how-we-work__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 64px;
+  margin-left: 80px;
+}
+.how-we-work .how-we-work__wrapper .how-we-work__block {
   width: 600px;
-  border: #ffffff 1px solid;
-  height: 773px;
+  margin-right: 100px;
 }
-.how-we-work .how-we-work__left-wrapper .how-we-work__left-content {
-  border: #ffffff 1px solid;
-}
-.how-we-work .how-we-work__left-wrapper .how-we-work__left-content .how-we-work__title h1 {
+.how-we-work .how-we-work__wrapper .how-we-work__block .how-we-work__title h1 {
   color: #ffffff;
-  font-size: 64px;
   font-weight: 700;
+  font-size: 64px;
+  color: #14213d;
+  text-shadow: 0 -1px 1px #f2f2f2, 0 -1px 1px #f2f2f2, 0 1px 1px #f2f2f2, 0 1px 1px #f2f2f2, -1px 0 1px #f2f2f2, 1px 0 1px #f2f2f2, -1px 0 1px #f2f2f2, 1px 0 1px #f2f2f2, -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2, -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2, -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2, -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2;
 }
-.how-we-work .how-we-work__left-wrapper .how-we-work__left-content .how-we-work__title p {
+.how-we-work .how-we-work__wrapper .how-we-work__block .how-we-work__title p {
+  width: 520px;
   color: #ffffff;
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
 }
-.how-we-work .how-we-work__left-wrapper .how-we-work__right-content {
+.how-we-work .how-we-work__wrapper .how-we-work__right-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-right: 100px;
 }
-.how-we-work .how-we-work__left-wrapper .how-we-work__right-content .how-we-work__text {
+.how-we-work .how-we-work__wrapper .how-we-work__right-content .how-we-work__text {
   width: 552px;
-  border: #ffffff 1px solid;
   margin: 24px;
 }
-.how-we-work .how-we-work__left-wrapper .how-we-work__right-content .how-we-work__text span {
+.how-we-work .how-we-work__wrapper .how-we-work__right-content .how-we-work__text span {
   color: #fca311;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
 }
-.how-we-work .how-we-work__left-wrapper .how-we-work__right-content .how-we-work__text h1 {
+.how-we-work .how-we-work__wrapper .how-we-work__right-content .how-we-work__text h1 {
   font-size: 40px;
   color: #ffffff;
 }
-.how-we-work .how-we-work__left-wrapper .how-we-work__right-content .how-we-work__text p {
+.how-we-work .how-we-work__wrapper .how-we-work__right-content .how-we-work__text p {
   font-size: 20px;
   font-weight: 400;
   color: #ffffff;
   line-height: 30px;
 }
-.how-we-work .how-we-work__left-wrapper .how-we-work__right-content img {
+.how-we-work .how-we-work__wrapper .how-we-work__right-content img {
   width: 405px;
   height: 402px;
-  border: #ffffff 1px solid;
+  margin-bottom: 71px;
+}
+.how-we-work .how-we-work__wrapper .step-4 {
+  margin-right: 50px;
 }
 
 .services {
@@ -294,6 +325,7 @@ content .about-us__partners img {
   width: 1440px;
   height: -moz-fit-content;
   height: fit-content;
+  display: none;
 }
 
 .services__title {
@@ -385,6 +417,7 @@ content .about-us__partners img {
   width: 1440px;
   height: -moz-fit-content;
   height: fit-content;
+  display: none;
 }
 
 .selected-cases__title {
@@ -494,17 +527,68 @@ content .about-us__partners img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 16px;
+  flex-flow: row wrap;
+}
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__ice-palace {
   width: 416px;
   height: 424px;
+  margin-top: 16px;
   background-image: url(../images/ice-palace-img.png);
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
   width: 416px;
   height: 424px;
+  margin-top: 16px;
   background-image: url(../images/cryptonator-img.png);
+}
+.selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city {
+  display: none;
+  width: 416px;
+  height: 424px;
+  margin-top: 16px;
+  animation: showBlock 0.5s linear forwards;
+  background-image: url(../images/bicycle-city.png);
+}
+.selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city .selected-cases__text h2,
+.selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city .selected-cases__text p {
+  color: #14213d;
+}
+.selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof {
+  display: none;
+  width: 416px;
+  height: 424px;
+  margin-top: 16px;
+  transition: all 0.3s;
+  animation: showBlock 0.5s linear forwards;
+  background-image: url(../images/peterhof.png);
+}
+.selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof .selected-cases__text h2,
+.selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof .selected-cases__text p {
+  color: #14213d;
+}
+.selected-cases__content .selected-cases__bottom_content .selected-cases__glonass {
+  display: none;
+  width: 416px;
+  height: 424px;
+  margin-top: 16px;
+  animation: showBlock 0.5s linear forwards;
+  background-image: url(../images/glonass.png);
+}
+.selected-cases__content .selected-cases__bottom_content .selected-cases__alfa-mk {
+  display: none;
+  width: 416px;
+  height: 424px;
+  margin-top: 16px;
+  animation: showBlock 0.5s linear forwards;
+  background-image: url(../images/alfa-mk.png);
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__add {
   display: flex;
@@ -513,10 +597,10 @@ content .about-us__partners img {
   align-items: center;
   width: 416px;
   height: 424px;
+  margin-top: 16px;
   background-color: #14213d;
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__add .selected-cases__add-wrapper {
-  width: 272px;
   height: 124px;
   text-align: center;
 }
@@ -530,6 +614,7 @@ content .about-us__partners img {
   width: 1440px;
   height: -moz-fit-content;
   height: fit-content;
+  display: none;
 }
 .discuss .discuss__wrapper {
   display: flex;
@@ -719,6 +804,7 @@ content .about-us__partners img {
   width: 1440px;
   height: 235px;
   background-color: #14213d;
+  display: none;
 }
 .footer .footer__wrapper {
   width: 1280px;
@@ -754,7 +840,6 @@ body {
 
 #app {
   max-width: 1440px;
-  width: 100vw;
   height: 100vh;
   background-color: #ffffff;
   margin: 0 auto;

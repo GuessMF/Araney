@@ -2,6 +2,11 @@
   width: 1440px;
   height: 877px;
   border: none;
+  // display: none;
+  border: black 1px solid;
+  @media (max-width: 1439px) {
+    width: 1280px;
+  }
 }
 content {
   display: flex;

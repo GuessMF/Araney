@@ -4,6 +4,7 @@
   align-items: center;
   width: 1440px;
   height: fit-content;
+  display: none;
 }
 .selected-cases__title {
   width: 1232px;
@@ -124,18 +125,82 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 16px;
+    flex-flow: row wrap;
+    // transition-duration: 2s;
+    // transition-duration: 9s;
+
+    @keyframes showBlock {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
     .selected-cases__ice-palace {
       width: 416px;
       height: 424px;
-
+      margin-top: 16px;
       background-image: url(../images/ice-palace-img.png);
     }
     .selected-cases__cryptonator {
       width: 416px;
       height: 424px;
+      margin-top: 16px;
 
       background-image: url(../images/cryptonator-img.png);
+    }
+
+    .selected-cases__bicycle-city {
+      display: none;
+      width: 416px;
+      height: 424px;
+      margin-top: 16px;
+      animation: showBlock 0.5s linear forwards;
+
+      .selected-cases__text {
+        h2,
+        p {
+          color: $secondary;
+        }
+      }
+
+      background-image: url(../images/bicycle-city.png);
+    }
+    .selected-cases__peterhof {
+      display: none;
+      width: 416px;
+      height: 424px;
+      margin-top: 16px;
+      transition: all 0.3s;
+      animation: showBlock 0.5s linear forwards;
+
+      .selected-cases__text {
+        h2,
+        p {
+          color: $secondary;
+        }
+      }
+      background-image: url(../images/peterhof.png);
+    }
+    .selected-cases__glonass {
+      display: none;
+      width: 416px;
+      height: 424px;
+      margin-top: 16px;
+      animation: showBlock 0.5s linear forwards;
+
+      background-image: url(../images/glonass.png);
+    }
+    .selected-cases__alfa-mk {
+      display: none;
+      width: 416px;
+      height: 424px;
+      margin-top: 16px;
+      animation: showBlock 0.5s linear forwards;
+
+      background-image: url(../images/alfa-mk.png);
     }
     .selected-cases__add {
       display: flex;
@@ -144,10 +209,11 @@
       align-items: center;
       width: 416px;
       height: 424px;
+      margin-top: 16px;
       background-color: $secondary;
 
       .selected-cases__add-wrapper {
-        width: 272px;
+        //  width: 272px;
         height: 124px;
         text-align: center;
         h3 {

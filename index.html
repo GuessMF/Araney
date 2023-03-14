@@ -135,9 +135,10 @@
             </div>
           </content>
         </div>
+
         <div id="how-we-work" class="how-we-work">
-          <div class="how-we-work__left-wrapper">
-            <div class="how-we-work__left-content">
+          <div class="how-we-work__wrapper">
+            <div class="how-we-work__block description">
               <div class="how-we-work__title">
                 <h1>Как мы работаем</h1>
                 <p>
@@ -146,9 +147,7 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="how-we-work__left-wrapper">
-            <div class="how-we-work__right-content">
+            <div class="how-we-work__right-content step-1">
               <div class="how-we-work__text">
                 <span>Шаг 1</span>
                 <h1>Изучение проекта</h1>
@@ -159,11 +158,86 @@
                 </p>
               </div>
               <div class="how-we-work__picture">
-                <img src="./src/images/illustration1.png" alt="illustration" />
+                <img src="./src/images/step1.png" alt="step1" />
+              </div>
+            </div>
+            <div class="how-we-work__right-content step-2">
+              <div class="how-we-work__text">
+                <span>Шаг 2</span>
+                <h1>Проектирование</h1>
+                <p>
+                  На основании данных мы проектируем user-flow, архитектуру
+                  проекта, а также планируем задачи и строим roadmap
+                </p>
+              </div>
+              <div class="how-we-work__picture">
+                <img src="./src/images/step2.png" alt="step2" />
+              </div>
+            </div>
+            <div class="how-we-work__right-content step-3">
+              <div class="how-we-work__text">
+                <span>Шаг 3</span>
+                <h1>Реализация проект</h1>
+                <p>
+                  Этот шаг можно декомпозироват на множество шагов: построение
+                  архитектуры сервиса, аналитика бизнес-процессов, брендинг,
+                  дизайн посадочных страниц, развёртывание ПО, программирование,
+                  SEO и таргетинг
+                </p>
+              </div>
+              <div class="how-we-work__picture">
+                <img src="./src/images/step3.png" alt="step3" />
+              </div>
+            </div>
+            <div class="how-we-work__right-content step-4">
+              <div class="how-we-work__text">
+                <span>Шаг 4</span>
+                <h1>Публикация и поддержка</h1>
+                <p>
+                  После реализации продукта, мы тщательно тестируем
+                  разработанное решение, после чего поддерживаем
+                  его работоспособность даже после завершения проекта
+                </p>
+              </div>
+              <div class="how-we-work__picture">
+                <img src="./src/images/step4.png" alt="step4" />
               </div>
             </div>
           </div>
+          <!-- <div class="how-we-work__right-wrapper">
+            <div class="how-we-work__right-content">
+              <div class="how-we-work__text">
+                <span>Шаг 1</span>
+                 <h1>Изучение проекта</h1>
+                <p>
+                  Мы тщательно изучаем поставленную задачу, уточним у вас все
+                  детали и ограничения проекта, после чего предложим варианты
+                  решения
+                </p> 
+              </div>
+              <div class="how-we-work__picture">
+                <img src="./src/images/illustration1.png" alt="illustration" />
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="how-we-work__wrapper">
+            <div class="how-we-work__right-content">
+              <div class="how-we-work__text">
+                <span>Шаг 1</span>
+                 <h1>Изучение проекта</h1>
+                <p>
+                  Мы тщательно изучаем поставленную задачу, уточним у вас все
+                  детали и ограничения проекта, после чего предложим варианты
+                  решения
+                </p> 
+              </div>
+              <div class="how-we-work__picture">
+                <img src="./src/images/illustration1.png" alt="illustration" />
+              </div>
+            </div>
+          </div> -->
         </div>
+
         <div id="services" class="services">
           <div class="services__title">
             <h2>Услуги</h2>
@@ -319,13 +393,50 @@
                   </div>
                 </div>
               </div>
+              <div class="selected-cases__bicycle-city">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Велогород</h2>
+                    <p>Система шеринга велосипедов</p>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__peterhof">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Петергоф</h2>
+                    <p>Система поддержки светодиодных и информационных табло</p>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__glonass">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Глонасс</h2>
+                    <p>Портал для системы Глонасс</p>
+                  </div>
+                </div>
+              </div>
               <div class="selected-cases__add">
                 <div class="selected-cases__add-wrapper">
                   <div class="selected-cases__plus-icon">
                     <img src="./src/images/add-icon.png" alt="add-icon" />
                   </div>
                   <div class="selected-cases__add-text">
-                    <h3>Нажмите, чтобы загрузить еще 3 работы</h3>
+                    <h3 class="selected-cases__add-text-h3">
+                      Нажмите, чтобы загрузить еще 3 работы
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div class="selected-cases__alfa-mk">
+                <div class="selected-cases__wrapper">
+                  <div class="selected-cases__text">
+                    <h2>Сайт для Альфа-МК</h2>
+                    <p>
+                      Дистрибьютор B-braw – крупнейшего бренда медицинского
+                      оборудования
+                    </p>
                   </div>
                 </div>
               </div>

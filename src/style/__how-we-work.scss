@@ -1,27 +1,58 @@
 .how-we-work {
+  // display: flex;
+
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
+  // display: inline-block;
+  // overflow-y: hidden;
+  // overflow-x: scroll;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   width: 1440px;
   height: 900px;
   background-color: $secondary;
-
   border: none;
+  // transform: rotate(-90deg);
+  // scroll-snap-type: mandatory;
+  // scroll-snap-points-y: repeat(300px);
+  // scroll-snap-type: y mandatory;
 
-  .how-we-work__left-wrapper {
-    width: 600px;
-    border: $white 1px solid;
-    height: 773px;
-    .how-we-work__left-content {
-      border: $white 1px solid;
+  // &::-webkit-scrollbar {
+  //   width: 0;
+  // }
+  display: none;
+
+  .how-we-work__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    width: fit-content;
+    // scroll-snap-align: start;
+    // transform: rotate(90deg);
+    margin-top: 64px;
+    margin-left: 80px;
+    //  border: #f2f2f2 1px solid;
+    .how-we-work__block {
+      width: 600px;
+      margin-right: 100px;
+
       .how-we-work__title {
         h1 {
           color: $white;
-          font-size: 64px;
           font-weight: 700;
+          font-size: 64px;
+          color: #14213d;
+          text-shadow: -0 -1px 1px #f2f2f2, 0 -1px 1px #f2f2f2,
+            -0 1px 1px #f2f2f2, 0 1px 1px #f2f2f2, -1px -0 1px #f2f2f2,
+            1px -0 1px #f2f2f2, -1px 0 1px #f2f2f2, 1px 0 1px #f2f2f2,
+            -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2, -1px 1px 1px #f2f2f2,
+            1px 1px 1px #f2f2f2, -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2,
+            -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2;
         }
         p {
+          width: 520px;
           color: $white;
           font-size: 20px;
           line-height: 30px;
@@ -34,9 +65,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-right: 100px;
+      //  border: #f2f2f2 1px solid;
       .how-we-work__text {
         width: 552px;
-        border: $white 1px solid;
+
         margin: 24px;
         span {
           color: $orange;
@@ -58,8 +91,22 @@
       img {
         width: 405px;
         height: 402px;
-        border: $white 1px solid;
+        margin-bottom: 71px;
       }
+    }
+    .description {
+      // display: none;
+    }
+    .step-1 {
+      // display: none;
+    }
+    .step-2 {
+      // display: none;
+    }
+    .step-3 {
+    }
+    .step-4 {
+      margin-right: 50px;
     }
   }
 }

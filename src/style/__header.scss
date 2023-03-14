@@ -3,11 +3,16 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
+  // max-width: 1280px;
   width: 100%;
   height: 80px;
   padding: 16px 80px;
   border: none;
+  // background-color: aqua;
+  @media (max-width: 1439px) {
+    background-color: aquamarine;
+    width: 1100px;
+  }
   .header__wrapper {
     display: flex;
     flex-direction: row;
@@ -23,7 +28,11 @@
       align-items: center;
       height: 100%;
       padding: 12px 24px;
-
+      a {
+        text-decoration: none;
+        color: $secondary-light;
+      }
+      // transition: all 2s ease-out;
       &:hover {
         border-bottom: solid 3px $orange;
         margin-bottom: -3px;
