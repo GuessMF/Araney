@@ -96,6 +96,9 @@ content {
       width: 100%;
       justify-content: space-between;
     }
+    @media (max-width: 850px) {
+      flex-direction: column;
+    }
     div {
       display: flex;
       flex-direction: column;
@@ -129,6 +132,10 @@ content {
       @media (max-width: 1439px) {
         width: 30%;
       }
+      @media (max-width: 850px) {
+        width: 100%;
+        margin-bottom: 16px;
+      }
     }
     .about-us__second-box {
       border: $gray-light 2px solid;
@@ -136,11 +143,20 @@ content {
       @media (max-width: 1439px) {
         width: 30%;
       }
+      @media (max-width: 850px) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 16px;
+      }
     }
     .about-us__third-box {
       border: $gray-light 2px solid;
       @media (max-width: 1439px) {
         width: 30%;
+      }
+      @media (max-width: 850px) {
+        width: 100%;
+        margin: 0;
       }
     }
   }

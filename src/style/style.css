@@ -2,17 +2,18 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 80px;
   padding: 16px 80px;
   border: none;
-  background-color: aqua;
+  max-width: 1440px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0;
 }
 @media (max-width: 1439px) {
   .header {
-    background-color: aquamarine;
     width: 100vw;
     margin: 0 auto;
     padding: 0;
@@ -21,11 +22,12 @@
 .header .header__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   font-size: 16px;
   font-weight: 600;
-  padding: 12px 10px;
+  padding: 10px 80px;
+  width: 100%;
+  justify-content: center;
 }
 @media (max-width: 1439px) {
   .header .header__wrapper {
@@ -58,10 +60,17 @@
 .header .header__wrapper .header__brand {
   width: 130px;
 }
-@media (max-width: 1439px) {
+.header .header__logo {
+  margin-left: 0;
+}
+@media (max-width: 1280px) {
   .header .header__logo {
     margin-left: auto;
+    margin-right: auto;
   }
+}
+.header .header__button {
+  margin-left: auto;
 }
 .header .header__button button {
   width: 180px;
@@ -114,9 +123,20 @@
   height: 234px;
   margin-left: 150px;
 }
+@media (max-width: 850px) {
+  .welcome-screen__left-box .welcome-screen__info {
+    width: 60vw;
+  }
+}
 @media (max-width: 1439px) {
   .welcome-screen__left-box {
     width: 50%;
+  }
+}
+@media (max-width: 850px) {
+  .welcome-screen__left-box {
+    width: 50vw;
+    margin-top: -100px;
   }
 }
 .welcome-screen__left-box .welcome-screen__title h1 {
@@ -164,6 +184,12 @@
   font-weight: 600;
   border: none;
   text-align: center;
+}
+@media (max-width: 850px) {
+  .welcome-screen__buttons {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .about-us {
@@ -283,6 +309,11 @@ content .about-us__middle {
     justify-content: space-between;
   }
 }
+@media (max-width: 850px) {
+  content .about-us__middle {
+    flex-direction: column;
+  }
+}
 content .about-us__middle div {
   display: flex;
   flex-direction: column;
@@ -320,6 +351,12 @@ content .about-us__middle .about-us__first-box {
     width: 30%;
   }
 }
+@media (max-width: 850px) {
+  content .about-us__middle .about-us__first-box {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
 content .about-us__middle .about-us__second-box {
   border: #f2f2f2 2px solid;
   margin: 0 16px;
@@ -329,12 +366,25 @@ content .about-us__middle .about-us__second-box {
     width: 30%;
   }
 }
+@media (max-width: 850px) {
+  content .about-us__middle .about-us__second-box {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+}
 content .about-us__middle .about-us__third-box {
   border: #f2f2f2 2px solid;
 }
 @media (max-width: 1439px) {
   content .about-us__middle .about-us__third-box {
     width: 30%;
+  }
+}
+@media (max-width: 850px) {
+  content .about-us__middle .about-us__third-box {
+    width: 100%;
+    margin: 0;
   }
 }
 content .about-us__subtitle {
@@ -493,9 +543,22 @@ content .about-us__partners img {
     width: 50vw;
   }
 }
+@media (max-width: 1280px) and (max-width: 850px) {
+  .how-we-work .how-we-work__wrapper .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+  }
+}
 @media (max-width: 1280px) {
   .how-we-work .how-we-work__wrapper .step-1 {
     margin-right: 0;
+  }
+}
+@media (max-width: 850px) {
+  .how-we-work .how-we-work__wrapper .step-1 {
+    display: none;
   }
 }
 @media (max-width: 1439px) {
@@ -588,12 +651,22 @@ content .about-us__partners img {
   font-weight: 600;
   line-height: 38px;
 }
+@media (max-width: 650px) {
+  .services__content_block .services__description .services__wrapper h2 {
+    font-size: 26px;
+  }
+}
 .services__content_block .services__description .services__wrapper p {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+}
+@media (max-width: 650px) {
+  .services__content_block .services__description .services__wrapper p {
+    font-size: 14px;
+  }
 }
 .services__content_block .services__description .services__button button {
   width: 344px;
@@ -683,6 +756,11 @@ content .about-us__partners img {
   color: #ffffff;
   margin: 0;
 }
+@media (max-width: 650px) {
+  .selected-cases__content .selected-cases__wrapper .selected-cases__text h2 {
+    font-size: 26px;
+  }
+}
 .selected-cases__content .selected-cases__wrapper .selected-cases__text p {
   font-size: 16px;
   font-weight: 400;
@@ -690,6 +768,11 @@ content .about-us__partners img {
   margin: 0;
   margin-top: 16px;
   line-height: 24px;
+}
+@media (max-width: 650px) {
+  .selected-cases__content .selected-cases__wrapper .selected-cases__text p {
+    font-size: 14px;
+  }
 }
 .selected-cases__content .selected-cases__wrapper .selected-cases__logo {
   display: flex;
@@ -815,6 +898,11 @@ content .about-us__partners img {
     width: 44vw;
   }
 }
+@media (max-width: 850px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__ice-palace {
+    height: 44vw;
+  }
+}
 .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
   width: 416px;
   height: 424px;
@@ -824,6 +912,11 @@ content .about-us__partners img {
 @media (max-width: 1280px) {
   .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
     width: 44vw;
+  }
+}
+@media (max-width: 850px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
+    height: 44vw;
   }
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city {
@@ -883,6 +976,11 @@ content .about-us__partners img {
     margin: 20px auto;
   }
 }
+@media (max-width: 850px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__add {
+    height: 44vw;
+  }
+}
 .selected-cases__content .selected-cases__bottom_content .selected-cases__add .selected-cases__add-wrapper {
   height: 124px;
   text-align: center;
@@ -891,6 +989,11 @@ content .about-us__partners img {
   font-size: 20px;
   font-weight: 400;
   color: #ffffff;
+}
+@media (max-width: 650px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__add .selected-cases__add-wrapper h3 {
+    font-size: 16px;
+  }
 }
 
 .discuss {

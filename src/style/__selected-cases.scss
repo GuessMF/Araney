@@ -48,6 +48,9 @@
         line-height: 38px;
         color: $white;
         margin: 0;
+        @media (max-width: 650px) {
+          font-size: 26px;
+        }
       }
       p {
         font-size: 16px;
@@ -56,6 +59,9 @@
         margin: 0;
         margin-top: 16px;
         line-height: 24px;
+        @media (max-width: 650px) {
+          font-size: 14px;
+        }
       }
     }
     .selected-cases__logo {
@@ -180,6 +186,10 @@
       @media (max-width: 1280px) {
         width: 44vw;
       }
+      @media (max-width: 850px) {
+        height: 44vw;
+        //  margin: 0;
+      }
     }
     .selected-cases__cryptonator {
       width: 416px;
@@ -188,6 +198,10 @@
       background-image: url(../images/cryptonator-img.png);
       @media (max-width: 1280px) {
         width: 44vw;
+      }
+      @media (max-width: 850px) {
+        height: 44vw;
+        // margin: 0;
       }
     }
 
@@ -254,6 +268,9 @@
         width: 44vw;
         margin: 20px auto;
       }
+      @media (max-width: 850px) {
+        height: 44vw;
+      }
 
       .selected-cases__add-wrapper {
         //  width: 272px;
@@ -263,6 +280,9 @@
           font-size: 20px;
           font-weight: 400;
           color: $white;
+          @media (max-width: 650px) {
+            font-size: 16px;
+          }
         }
       }
     }
