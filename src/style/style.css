@@ -784,6 +784,7 @@ content .about-us__partners img {
 @media (max-width: 420px) {
   .services__content_block {
     border: #f2f2f2 2px solid;
+    height: 50vw;
   }
 }
 .services__content_block .services__description {
@@ -811,6 +812,9 @@ content .about-us__partners img {
     margin: 10px;
     justify-content: center;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 .services__content_block .services__description .services__wrapper {
@@ -859,14 +863,9 @@ content .about-us__partners img {
 }
 @media (max-width: 420px) {
   .services__content_block .services__description .services__wrapper h2 {
-    font-size: 16px;
+    font-size: 24px;
     width: 100%;
     margin-bottom: 10px;
-  }
-}
-@media (max-width: 380px) {
-  .services__content_block .services__description .services__wrapper h2 {
-    font-size: 16px;
   }
 }
 .services__content_block .services__description .services__wrapper p {
@@ -899,16 +898,8 @@ content .about-us__partners img {
   .services__content_block .services__description .services__wrapper p {
     line-height: 12px;
     margin-bottom: 22px;
-  }
-}
-@media (max-width: 380px) {
-  .services__content_block .services__description .services__wrapper p {
-    font-size: 10px;
-  }
-}
-@media (max-width: 320px) {
-  .services__content_block .services__description .services__wrapper p {
-    margin-bottom: 0;
+    font-size: 14px;
+    margin-top: 30px;
   }
 }
 @media (max-width: 630px) {
@@ -920,7 +911,7 @@ content .about-us__partners img {
   .services__content_block .services__description .services__button {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 .services__content_block .services__description .services__button button {
@@ -948,11 +939,7 @@ content .about-us__partners img {
 @media (max-width: 420px) {
   .services__content_block .services__description .services__button button {
     height: 30px;
-  }
-}
-@media (max-width: 300px) {
-  .services__content_block .services__description .services__button button {
-    font-size: 8px;
+    margin-bottom: 0;
   }
 }
 .services__content_block .services__description .services__button .new-button-img {

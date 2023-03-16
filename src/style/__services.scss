@@ -53,6 +53,8 @@
   }
   @media (max-width: 420px) {
     border: $gray-light 2px solid;
+
+    height: 50vw;
   }
 
   .services__description {
@@ -68,13 +70,15 @@
     }
     @media (max-width: 450px) {
       height: 100%;
-      //height: fit-content;
     }
     @media (max-width: 420px) {
       height: 90%;
       margin: 10px;
       justify-content: center;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .services__wrapper {
@@ -107,13 +111,13 @@
           width: max-content;
         }
         @media (max-width: 420px) {
-          font-size: 16px;
+          font-size: 24px;
           width: 100%;
           margin-bottom: 10px;
         }
-        @media (max-width: 380px) {
-          font-size: 16px;
-        }
+        // @media (max-width: 380px) {
+        //   font-size: 16px;
+        // }
       }
       p {
         margin-top: 0;
@@ -136,13 +140,15 @@
         @media (max-width: 420px) {
           line-height: 12px;
           margin-bottom: 22px;
+          font-size: 14px;
+          margin-top: 30px;
         }
-        @media (max-width: 380px) {
-          font-size: 10px;
-        }
-        @media (max-width: 320px) {
-          margin-bottom: 0;
-        }
+        // @media (max-width: 380px) {
+        //   font-size: 10px;
+        // }
+        // @media (max-width: 320px) {
+        //   margin-bottom: 0;
+        // }
       }
     }
     .services__button {
@@ -152,7 +158,7 @@
       @media (max-width: 420px) {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
       }
       button {
         width: 344px;
@@ -178,10 +184,11 @@
           // width: 80%;
           // align-self: center;
           height: 30px;
+          margin-bottom: 0;
         }
-        @media (max-width: 300px) {
-          font-size: 8px;
-        }
+        // @media (max-width: 300px) {
+        //   font-size: 8px;
+        // }
       }
       .new-button-img {
         display: none;
