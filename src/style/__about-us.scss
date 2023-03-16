@@ -205,20 +205,29 @@ content {
     font-size: 20px;
     font-weight: 400;
     @media (max-width: 1100px) {
-      // height: fit-content; */
-      /* width: fit-content; */
       flex-wrap: wrap;
       justify-content: center;
       height: fit-content;
       margin-bottom: 20px;
     }
+    @media (max-width: 635px) {
+      // justify-content: flex-end;
+    }
     div {
       margin: 0 26px;
+      width: fit-content;
+      @media (max-width: 635px) {
+        margin: 0;
+      }
     }
     img {
       filter: grayscale(100%) contrast(0%) brightness(100%);
       // filter: contrast(0%);
       // filter: brightness(5%);
+      @media (max-width: 800px) {
+        // width: 20vw;
+        width: 50%;
+      }
     }
   }
 }
