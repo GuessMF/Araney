@@ -416,11 +416,17 @@ content .about-us__middle .about-us__icon {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media (max-width: 1439px) {
   content .about-us__middle .about-us__icon {
     width: 100%;
   }
+}
+content .about-us__middle .about-us__icon img {
+  width: auto;
+  height: auto;
 }
 content .about-us__middle .about-us__first-box {
   border: #f2f2f2 2px solid;

@@ -137,8 +137,13 @@ content {
       display: flex;
       flex-direction: row;
       justify-content: end;
+      height: fit-content;
       @media (max-width: 1439px) {
         width: 100%;
+      }
+      img {
+        width: auto;
+        height: auto;
       }
     }
     .about-us__first-box {
