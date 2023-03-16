@@ -7,35 +7,70 @@ const footerCurrentYear = (document.querySelector(
 function disabledScroll() {
   document.body.style.cssText = ` overflow: hidden`;
 }
+const target = document.querySelector("#how-we-work");
+function horizontalSkroll() {
+  window.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0 && blockScroll == true) {
+      target.scrollLeft += 700;
+      console.log(target.scrollLeft + " Left");
+    } else if (e.deltaY < 0 && blockScroll == true) {
+      target.scrollLeft -= 700;
+      console.log(target.scrollLeft + "Left");
+    }
+  });
+}
 
 const options = {
-  threshold: 0,
-  rootMargin: "-50% 0% -50% 0%",
+  threshold: 0.5,
+  rootMargin: "0px 0px -48% 0px",
 };
 
-// const target = document.querySelector("#how-we-work");
-// const target2 = document.querySelector(".step-4");
-// const callback = function (entries, observer) {
-//   entries.forEach((entry) => {
-//     const {isIntersecting} = entry;
-//     console.log(isIntersecting);
-//     if (isIntersecting) {
-//       window.addEventListener("wheel", function (e) {
-//         if (e.deltaY > 0) {
-//           target.scrollLeft += 700;
-//         } else {
-//           target.scrollLeft -= 700;
-//         }
-//       });
-//       disabledScroll();
-//     } else {
-//       console.log("No");
-//     }
-//   });
-// };
-// const observer = new IntersectionObserver(callback, options);
+const target2 = document.querySelector(".step-4");
+const callback = function (entries, observer) {
+  entries.forEach((entry) => {
+    const {isIntersecting} = entry;
+    let blockScroll = false;
+    console.log(isIntersecting + " is");
+    direction = "";
 
-//observer.observe(target);
+    if (isIntersecting) {
+      blockScroll = true;
+      disabledScroll();
+      console.log(blockScroll + "Block srooll srabotal");
+
+      window.addEventListener("wheel", (e) => {
+        if (e.deltaY < 0) {
+          if (direction !== "up" || target.scrollLeft > 10) {
+            console.log("up");
+            target.scrollLeft -= 700;
+            console.log(target.scrollLeft);
+            target.scrollLeft < 10
+              ? (document.body.style.cssText = ` overflow:scroll`)
+              : null;
+            direction = "up";
+          }
+        }
+        if (e.deltaY > 0) {
+          if (direction !== "down" || target.scrollLeft < 2080) {
+            console.log("down");
+            target.scrollLeft += 700;
+            target.scrollLeft > 2080
+              ? (document.body.style.cssText = ` overflow:scroll`)
+              : null;
+            direction = "down";
+          }
+        }
+      });
+    } else {
+      blockScroll = false;
+    }
+    console.log(blockScroll);
+  });
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+observer.observe(target);
 
 const addButton = document.querySelector(".selected-cases__add");
 const bicycleCity = document.querySelector(".selected-cases__bicycle-city");

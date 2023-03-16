@@ -177,9 +177,11 @@
     align-self: center;
     margin-bottom: 1%;
     background-color: $white;
+    //  a {
     &:hover {
       border-bottom: solid 3px $orange;
       //margin-bottom: -3px;
+      //   }
     }
   }
 
@@ -277,11 +279,18 @@
       a {
         text-decoration: none;
         color: $secondary-light;
+        // border: black 1px solid;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
       // transition: all 2s ease-out;
       &:hover {
-        border-bottom: solid 3px $orange;
-        margin-bottom: -3px;
+        a {
+          border-bottom: solid 3px $orange;
+          margin-bottom: -3px;
+        }
       }
     }
 

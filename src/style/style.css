@@ -210,8 +210,12 @@
 .header .header__wrapper div a {
   text-decoration: none;
   color: #1c2e54;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.header .header__wrapper div:hover {
+.header .header__wrapper div:hover a {
   border-bottom: solid 3px #fca311;
   margin-bottom: -3px;
 }
