@@ -377,6 +377,11 @@ content .about-us__header .about-us__logo-box {
     width: 85%;
   }
 }
+@media (max-width: 420px) {
+  content .about-us__header .about-us__logo-box {
+    height: 50vw;
+  }
+}
 content .about-us__middle {
   display: flex;
   flex-direction: row;
@@ -399,6 +404,11 @@ content .about-us__middle div {
   justify-content: end;
   width: 412px;
   height: 240px;
+}
+@media (max-width: 420px) {
+  content .about-us__middle div {
+    height: 50vw;
+  }
 }
 content .about-us__middle .about-us__stat {
   display: flex;
