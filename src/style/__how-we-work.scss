@@ -58,6 +58,12 @@
       }
 
       .how-we-work__title {
+        @media (max-width: 420px) {
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
         h1 {
           color: $white;
           font-weight: 700;
@@ -69,6 +75,14 @@
             -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2, -1px 1px 1px #f2f2f2,
             1px 1px 1px #f2f2f2, -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2,
             -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2;
+          @media (max-width: 420px) {
+            margin: 0 auto;
+            width: 90%;
+            font-size: 60px;
+          }
+          @media (max-width: 320px) {
+            font-size: 50px;
+          }
         }
         p {
           width: 520px;
@@ -78,6 +92,14 @@
           font-weight: 400;
           @media (max-width: 1280px) {
             width: 80%;
+          }
+          @media (max-width: 420px) {
+            margin: 60px auto;
+            width: 90%;
+            line-height: 50px;
+          }
+          @media (max-width: 320px) {
+            font-size: 18px;
           }
         }
       }

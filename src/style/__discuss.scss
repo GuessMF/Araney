@@ -30,25 +30,43 @@
       @media (max-width: 1280px) {
         width: fit-content;
       }
+      @media (max-width: 600px) {
+        height: fit-content;
+      }
       .discuss__text {
         width: 524px;
+        @media (max-width: 600px) {
+          width: 100%;
+          height: fit-content;
+        }
 
         h2 {
           font-size: 32px;
           font-weight: 600;
           line-height: 38px;
           margin-top: 0;
+          @media (max-width: 450px) {
+            font-size: 26px;
+          }
         }
         h3 {
           font-size: 20px;
           font-weight: 400;
           line-height: 30px;
+          @media (max-width: 450px) {
+            font-size: 16px;
+          }
         }
       }
       .discuss__img {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        img {
+          @media (max-width: 600px) {
+            width: 90%;
+          }
+        }
       }
     }
     .discuss__right-box {
@@ -65,6 +83,10 @@
       .discuss__content {
         width: 584px;
         height: 560px;
+        @media (max-width: 630px) {
+          width: 100%;
+          height: fit-content;
+        }
 
         .discuss__form_title {
           h3 {
@@ -88,12 +110,18 @@
           border: 1px $gray solid;
           background-color: $white;
           margin-top: 3px;
+          @media (max-width: 630px) {
+            width: 100%;
+          }
         }
         .discuss__form_top {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           margin-top: 24px;
+          @media (max-width: 550px) {
+            flex-direction: column;
+          }
 
           p {
             margin: 0;
@@ -107,12 +135,28 @@
             height: 24px;
             border-radius: 0px;
             border: none;
+            @media (max-width: 630px) {
+              width: 90%;
+            }
           }
           .discuss__form_left {
             width: 284px;
+            @media (max-width: 630px) {
+              width: 49%;
+            }
+            @media (max-width: 550px) {
+              width: 100%;
+            }
           }
           .discuss__form_right {
             width: 284px;
+            @media (max-width: 630px) {
+              width: 49%;
+            }
+            @media (max-width: 550px) {
+              width: 100%;
+              margin-top: 16px;
+            }
           }
         }
         .discuss__form_middle {
@@ -132,10 +176,16 @@
             height: 50%;
             border-radius: 0px;
             border: none;
+            @media (max-width: 630px) {
+              width: 96%;
+            }
           }
         }
         .discuss__form_bottom {
           margin-top: 16px;
+          @media (max-width: 630px) {
+            width: 100%;
+          }
           p {
             margin: 0;
             font-size: 14px;
@@ -153,6 +203,9 @@
             border: none;
             resize: none;
             color: $gray;
+            @media (max-width: 630px) {
+              width: 96%;
+            }
           }
         }
         .discuss__form_add {
@@ -194,8 +247,11 @@
       .discuss__policy {
         width: 584px;
         height: 36px;
-
         margin-top: 24px;
+        @media (max-width: 630px) {
+          width: 100%;
+          height: fit-content;
+        }
         p {
           font-size: 12px;
           font-weight: 400;

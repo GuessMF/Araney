@@ -39,8 +39,10 @@
     flex-direction: column;
     justify-content: space-between;
     width: auto;
-
     margin: 24px;
+    @media (max-width: 460px) {
+      margin: 20px;
+    }
     .selected-cases__text {
       h2 {
         font-size: 32px;
@@ -50,6 +52,9 @@
         margin: 0;
         @media (max-width: 650px) {
           font-size: 26px;
+        }
+        @media (max-width: 460px) {
+          font-size: 20px;
         }
       }
       p {
@@ -61,6 +66,10 @@
         line-height: 24px;
         @media (max-width: 650px) {
           font-size: 14px;
+        }
+        @media (max-width: 460px) {
+          font-size: 12px;
+          line-height: 14px;
         }
       }
     }
@@ -89,6 +98,9 @@
       @media (max-width: 1280px) {
         width: 90vw;
       }
+      @media (max-width: 650px) {
+        height: 90vw;
+      }
 
       .selected-cases__am-block {
         display: flex;
@@ -99,11 +111,17 @@
         @media (max-width: 1280px) {
           width: 90vw;
         }
+        @media (max-width: 650px) {
+          height: 45vw;
+        }
 
         .selected-cases__wrapper {
           height: 100%;
           p {
             width: 524px;
+            @media (max-width: 600px) {
+              width: auto;
+            }
           }
         }
       }
@@ -118,6 +136,9 @@
         width: 90vw;
         margin-top: 16px;
       }
+      @media (max-width: 650px) {
+        height: fit-content;
+      }
 
       .selected-cases__rzd_block {
         display: flex;
@@ -126,6 +147,9 @@
         background-color: $gray-light;
         @media (max-width: 1280px) {
           width: 90vw;
+        }
+        @media (max-width: 650px) {
+          height: 44vw;
         }
 
         .selected-cases__rzd-img {
@@ -150,6 +174,10 @@
         background-image: url(../images/declarant-img.png);
         .selected-cases__wrapper {
           height: 87%;
+        }
+        @media (max-width: 650px) {
+          height: 44vw;
+          margin-top: 16px;
         }
       }
     }
@@ -190,6 +218,10 @@
         height: 44vw;
         //  margin: 0;
       }
+      @media (max-width: 600px) {
+        width: 90vw;
+        //  margin: 0;
+      }
     }
     .selected-cases__cryptonator {
       width: 416px;
@@ -202,6 +234,10 @@
       @media (max-width: 850px) {
         height: 44vw;
         // margin: 0;
+      }
+      @media (max-width: 600px) {
+        width: 90vw;
+        //  margin: 0;
       }
     }
 
@@ -271,6 +307,10 @@
       @media (max-width: 850px) {
         height: 44vw;
       }
+      @media (max-width: 600px) {
+        width: 90vw;
+        //  margin: 0;
+      }
 
       .selected-cases__add-wrapper {
         //  width: 272px;
@@ -282,6 +322,9 @@
           color: $white;
           @media (max-width: 650px) {
             font-size: 16px;
+          }
+          @media (max-width: 460px) {
+            font-size: 13px;
           }
         }
       }

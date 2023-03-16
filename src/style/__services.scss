@@ -45,16 +45,48 @@
     width: 90vw;
     justify-content: space-between;
   }
+  @media (max-width: 650px) {
+    height: 45vw;
+  }
+  @media (max-width: 450px) {
+    height: 40vw;
+  }
+  @media (max-width: 420px) {
+    // border: $gray-light 2px solid;
+  }
+
   .services__description {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 408px;
+    @media (max-width: 630px) {
+      width: 60%;
+      margin-left: 10px;
+      z-index: 2;
+    }
+    @media (max-width: 450px) {
+      height: 100%;
+      //height: fit-content;
+    }
+    @media (max-width: 420px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
 
     .services__wrapper {
       width: 344px;
       margin-top: 32px;
+      @media (max-width: 630px) {
+        width: 100%;
+      }
+      @media (max-width: 450px) {
+        margin-top: 10px;
+      }
       h2 {
         margin-top: 0;
         margin-bottom: 12px;
@@ -63,6 +95,23 @@
         line-height: 38px;
         @media (max-width: 650px) {
           font-size: 26px;
+        }
+        @media (max-width: 600px) {
+          line-height: 30px;
+        }
+        @media (max-width: 450px) {
+          font-size: 20px;
+          line-height: 26px;
+          width: max-content;
+        }
+
+        @media (max-width: 420px) {
+          font-size: 16px;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        @media (max-width: 380px) {
+          font-size: 16px;
         }
       }
       p {
@@ -74,9 +123,36 @@
         @media (max-width: 650px) {
           font-size: 14px;
         }
+        @media (max-width: 600px) {
+          line-height: 16px;
+        }
+        @media (max-width: 450px) {
+          width: fit-content;
+          font-size: 12px;
+          margin-bottom: 12px;
+          line-height: 16px;
+        }
+        @media (max-width: 420px) {
+          line-height: 12px;
+          margin-bottom: 22px;
+        }
+        @media (max-width: 380px) {
+          font-size: 10px;
+        }
+        @media (max-width: 320px) {
+          margin-bottom: 0;
+        }
       }
     }
     .services__button {
+      @media (max-width: 630px) {
+        width: 100%;
+      }
+      @media (max-width: 420px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
       button {
         width: 344px;
         height: 38px;
@@ -86,6 +162,44 @@
         color: $secondary;
         font-size: 14px;
         font-weight: 600;
+        @media (max-width: 630px) {
+          width: 100%;
+        }
+        @media (max-width: 450px) {
+          height: 63%;
+          width: 70%;
+          font-size: 12px;
+        }
+        @media (max-width: 420px) {
+          height: 50%;
+          font-size: 10px;
+          margin: 0;
+          width: 80%;
+          align-self: center;
+        }
+        @media (max-width: 300px) {
+          font-size: 8px;
+        }
+      }
+      .new-button-img {
+        display: none;
+        @media (max-width: 420px) {
+          display: block;
+          width: 10vw;
+        }
+        img {
+          width: 10vw;
+          height: auto;
+          @media (max-width: 335px) {
+            width: 9vw;
+          }
+          @media (max-width: 320px) {
+            width: 8vw;
+          }
+          @media (max-width: 287px) {
+            width: 7vw;
+          }
+        }
       }
     }
   }
@@ -94,10 +208,24 @@
     flex-direction: row;
     justify-content: end;
     width: 224px;
+    @media (max-width: 630px) {
+      width: 50%;
+      z-index: 1;
+    }
+    @media (max-width: 420px) {
+      display: none;
+    }
 
     img {
       width: 208px;
       height: 300px;
+      @media (max-width: 650px) {
+        width: 100%;
+        height: auto;
+      }
+      @media (max-width: 450px) {
+        height: auto;
+      }
     }
   }
 }
@@ -105,6 +233,7 @@
 .first_content_block {
   background-color: $secondary;
   color: $white;
+  border: none !important;
   button {
     background-color: $orange !important;
     color: $white !important;
