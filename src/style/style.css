@@ -528,6 +528,9 @@ content .about-us__header .about-us__logo-box {
     margin-top: 16px;
   }
 }
+content .about-us__header .about-us__logo-box img {
+  width: 300px;
+}
 @media (max-width: 1280px) {
   content .about-us__header .about-us__logo-box img {
     width: 90%;
@@ -610,6 +613,7 @@ content .about-us__middle .about-us__icon {
 content .about-us__middle .about-us__icon img {
   width: auto;
   height: auto;
+  width: 116px;
 }
 @media (max-width: 450px) {
   content .about-us__middle .about-us__icon img {

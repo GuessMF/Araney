@@ -92,6 +92,7 @@ content {
       }
 
       img {
+        width: 300px;
         @media (max-width: 1280px) {
           width: 90%;
         }
@@ -159,6 +160,7 @@ content {
       img {
         width: auto;
         height: auto;
+        width: 116px;
         @media (max-width: 450px) {
           width: 25%;
         }
