@@ -15,7 +15,7 @@
 (function () {
   init();
 
-  var g_containerInViewport;
+  //let g_containerInViewport;
   function init() {
     setStickyContainersSize();
     bindEvents();
@@ -33,13 +33,14 @@
           container.querySelector("main").scrollWidth;
         container.setAttribute(
           "style",
-          "height: " + stikyContainerHeight + "px"
+          "height: " + stikyContainerHeight / 1.5 + "px"
         );
       });
   }
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
+    // console.log(rect.top);
     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
   }
 
@@ -54,9 +55,10 @@
       return;
     }
 
-    var isPlaceHolderBelowTop =
+    let isPlaceHolderBelowTop =
       containerInViewPort.offsetTop < document.documentElement.scrollTop;
-    var isPlaceHolderBelowBottom =
+
+    let isPlaceHolderBelowBottom =
       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
       document.documentElement.scrollTop;
     let g_canScrollHorizontally =

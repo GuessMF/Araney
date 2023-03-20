@@ -5,7 +5,6 @@
   top: 0;
   left: 0;
   z-index: 50;
-  display: none;
 }
 .header .container {
   max-width: 1050px;
@@ -715,28 +714,25 @@ content .about-us__partners img {
   }
 }
 
-.sticky-container {
-  width: -moz-fit-content;
-  width: fit-content;
-  width: 100vw;
+.how-we-work {
+  width: auto;
+  height: auto;
 }
-.sticky-container main {
+.how-we-work main {
   overflow-x: hidden;
   display: flex;
   position: sticky;
   top: 0;
+  width: 90vw;
 }
-.sticky-container h1 {
-  margin: 0;
-  padding: 0;
-}
-.sticky-container section {
+.how-we-work section {
   min-width: 50vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 4ch;
+  background-color: #14213d;
 }
 
 .services {
@@ -1922,7 +1918,6 @@ body,
 html {
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
-  overflow-x: hidden;
 }
 
 #app {
