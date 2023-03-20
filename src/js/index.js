@@ -8,7 +8,10 @@
 
 // let intElemScrollTop = window.scrollTop();
 // console.log(intElemScrollTop);
-
+/**
+ * By Alvaro Trigo
+ * Follow me on Twitter: https://twitter.com/imac2
+ */
 (function () {
   init();
 
@@ -23,12 +26,16 @@
   }
 
   function setStickyContainersSize() {
-    document.querySelectorAll(".how-we-work").forEach(function (container) {
-      const stikyContainerHeight =
-        container.querySelector(".wrapper-sticky").scrollWidth;
-      container.setAttribute("style", "height: " + stikyContainerHeight + "px");
-      console.log(stikyContainerHeight + "stikyContainerHeight");
-    });
+    document
+      .querySelectorAll(".sticky-container")
+      .forEach(function (container) {
+        const stikyContainerHeight =
+          container.querySelector("main").scrollWidth;
+        container.setAttribute(
+          "style",
+          "height: " + stikyContainerHeight + "px"
+        );
+      });
   }
 
   function isElementInViewport(el) {
@@ -38,35 +45,87 @@
 
   function wheelHandler(evt) {
     const containerInViewPort = Array.from(
-      document.querySelectorAll(".how-we-work")
+      document.querySelectorAll(".sticky-container")
     ).filter(function (container) {
-      //console.log(container);
       return isElementInViewport(container);
     })[0];
-    console.log(containerInViewPort);
 
     if (!containerInViewPort) {
       return;
     }
 
-    let isPlaceHolderBelowTop =
+    var isPlaceHolderBelowTop =
       containerInViewPort.offsetTop < document.documentElement.scrollTop;
-
-    // console.log(isPlaceHolderBelowTop + "isPlaceHolderBelowTop");
-    let isPlaceHolderBelowBottom =
+    var isPlaceHolderBelowBottom =
       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
       document.documentElement.scrollTop;
-    // console.log(isPlaceHolderBelowBottom + "isPlaceHolderBelowBottom");
     let g_canScrollHorizontally =
       isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
-    //console.log(isPlaceHolderBelowBottom + "isPlaceHolderBelowBottom");
 
     if (g_canScrollHorizontally) {
-      containerInViewPort.querySelector(".wrapper-sticky").scrollLeft +=
-        evt.deltaY;
+      containerInViewPort.querySelector("main").scrollLeft += evt.deltaY;
     }
   }
 })();
+
+// (function () {
+//   init();
+
+//   var g_containerInViewport;
+//   function init() {
+//     setStickyContainersSize();
+//     bindEvents();
+//   }
+
+//   function bindEvents() {
+//     window.addEventListener("wheel", wheelHandler);
+//   }
+
+//   function setStickyContainersSize() {
+//     document.querySelectorAll(".how-we-work").forEach(function (container) {
+//       const stikyContainerHeight =
+//         container.querySelector(".wrapper-sticky").scrollWidth;
+//       container.setAttribute("style", "height: " + stikyContainerHeight + "px");
+//       console.log(stikyContainerHeight + "stikyContainerHeight");
+//     });
+//   }
+
+//   function isElementInViewport(el) {
+//     const rect = el.getBoundingClientRect();
+//     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
+//   }
+
+//   function wheelHandler(evt) {
+//     const containerInViewPort = Array.from(
+//       document.querySelectorAll(".how-we-work")
+//     ).filter(function (container) {
+//       //console.log(container);
+//       return isElementInViewport(container);
+//     })[0];
+//     console.log(containerInViewPort);
+
+//     if (!containerInViewPort) {
+//       return;
+//     }
+
+//     let isPlaceHolderBelowTop =
+//       containerInViewPort.offsetTop < document.documentElement.scrollTop;
+
+//     // console.log(isPlaceHolderBelowTop + "isPlaceHolderBelowTop");
+//     let isPlaceHolderBelowBottom =
+//       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
+//       document.documentElement.scrollTop;
+//     // console.log(isPlaceHolderBelowBottom + "isPlaceHolderBelowBottom");
+//     let g_canScrollHorizontally =
+//       isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+//     //console.log(isPlaceHolderBelowBottom + "isPlaceHolderBelowBottom");
+
+//     if (g_canScrollHorizontally) {
+//       containerInViewPort.querySelector(".wrapper-sticky").scrollLeft +=
+//         evt.deltaY;
+//     }
+//   }
+// })();
 //
 //
 //
