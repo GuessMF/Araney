@@ -49,6 +49,11 @@
         flex-direction: column;
         margin-top: 20px;
       }
+      .footer__logo {
+        img {
+          width: 150px;
+        }
+      }
       .footer__info {
         p {
           font-size: 16px;

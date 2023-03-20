@@ -2056,6 +2056,9 @@ content .about-us__partners img {
     margin-top: 20px;
   }
 }
+.footer .footer__wrapper .footer__bottom .footer__logo img {
+  width: 150px;
+}
 .footer .footer__wrapper .footer__bottom .footer__info p {
   font-size: 16px;
   color: #cccccc;
