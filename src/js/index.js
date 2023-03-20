@@ -12,7 +12,7 @@
 (function () {
   init();
 
-  let g_containerInViewport;
+  var g_containerInViewport;
   function init() {
     setStickyContainersSize();
     bindEvents();
@@ -24,8 +24,10 @@
 
   function setStickyContainersSize() {
     document.querySelectorAll(".how-we-work").forEach(function (container) {
-      const stikyContainerHeight = container.querySelector("main").scrollWidth;
+      const stikyContainerHeight =
+        container.querySelector(".wrapper-sticky").scrollWidth;
       container.setAttribute("style", "height: " + stikyContainerHeight + "px");
+      console.log(stikyContainerHeight + "stikyContainerHeight");
     });
   }
 
@@ -38,23 +40,30 @@
     const containerInViewPort = Array.from(
       document.querySelectorAll(".how-we-work")
     ).filter(function (container) {
+      //console.log(container);
       return isElementInViewport(container);
     })[0];
+    console.log(containerInViewPort);
 
     if (!containerInViewPort) {
       return;
     }
 
-    var isPlaceHolderBelowTop =
+    let isPlaceHolderBelowTop =
       containerInViewPort.offsetTop < document.documentElement.scrollTop;
-    var isPlaceHolderBelowBottom =
+
+    // console.log(isPlaceHolderBelowTop + "isPlaceHolderBelowTop");
+    let isPlaceHolderBelowBottom =
       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
       document.documentElement.scrollTop;
+    // console.log(isPlaceHolderBelowBottom + "isPlaceHolderBelowBottom");
     let g_canScrollHorizontally =
       isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+    //console.log(isPlaceHolderBelowBottom + "isPlaceHolderBelowBottom");
 
     if (g_canScrollHorizontally) {
-      containerInViewPort.querySelector("main").scrollLeft += evt.deltaY;
+      containerInViewPort.querySelector(".wrapper-sticky").scrollLeft +=
+        evt.deltaY;
     }
   }
 })();
@@ -155,8 +164,8 @@
 //   });
 // };
 
-const observer = new IntersectionObserver(callback, options);
-observer.observe(target);
+// const observer = new IntersectionObserver(callback, options);
+// observer.observe(target);
 
 //Закрытие гамбургер меню
 const items = document.querySelector(".menu-items");

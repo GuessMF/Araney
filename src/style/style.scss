@@ -8,6 +8,7 @@
 @import "__selected-cases.scss";
 @import "__discuss.scss";
 @import "__footer.scss";
+
 body,
 html {
   font-family: "Nunito Sans", sans-serif;
@@ -17,7 +18,8 @@ html {
 #app {
   max-width: 1440px;
   // width: 100vw;
-  height: 100vh;
+  //height: 100vh;
+  height: fit-content;
   background-color: $white;
   margin: 0 auto;
   display: flex;
