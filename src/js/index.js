@@ -96,11 +96,17 @@
 
 // observer.observe(target);
 
-function closeMenu() {
-  let checkToggle = document.getElementById("toggle");
-  checkToggle.checked = false;
-}
+//Закрытие гамбургер меню
+const items = document.querySelector(".menu-items");
+items.addEventListener("click", (e) => {
+  const {target} = e;
+  if (target.matches("a")) {
+    checkToggle = document.getElementById("toggle");
+    checkToggle.checked = false;
+  }
+});
 
+//Появляющиеся элементы в Избранных кейсах
 const addButton = document.querySelector(".selected-cases__add");
 const bicycleCity = document.querySelector(".selected-cases__bicycle-city");
 const peterhof = document.querySelector(".selected-cases__peterhof");
@@ -120,8 +126,8 @@ addButton.addEventListener("click", () => {
   addButton.style.margin = "20px 0 0 0";
 });
 
+//Текущая дата в футере
 let year = new Date().getFullYear();
-
 const footerCurrentYear = (document.querySelector(
   ".footer__current-year"
 ).textContent = `${year} год`);
