@@ -96,6 +96,11 @@
 
 // observer.observe(target);
 
+function closeMenu() {
+  let checkToggle = document.getElementById("toggle");
+  checkToggle.checked = false;
+}
+
 const addButton = document.querySelector(".selected-cases__add");
 const bicycleCity = document.querySelector(".selected-cases__bicycle-city");
 const peterhof = document.querySelector(".selected-cases__peterhof");
