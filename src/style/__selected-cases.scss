@@ -17,6 +17,9 @@
   @media (max-width: 1280px) {
     width: 90vw;
   }
+  @media (max-width: 450px) {
+    margin-top: 60px;
+  }
 
   h2 {
     margin: 0;
@@ -53,9 +56,9 @@
         @media (max-width: 650px) {
           font-size: 26px;
         }
-        @media (max-width: 460px) {
-          font-size: 20px;
-        }
+        // @media (max-width: 460px) {
+        //   font-size: 20px;
+        // }
       }
       p {
         font-size: 16px;
@@ -67,16 +70,21 @@
         @media (max-width: 650px) {
           font-size: 14px;
         }
-        @media (max-width: 460px) {
-          font-size: 12px;
-          line-height: 14px;
-        }
+        // @media (max-width: 460px) {
+        //   font-size: 12px;
+        //   line-height: 14px;
+        // }
       }
     }
     .selected-cases__logo {
       display: flex;
       flex-direction: row;
       justify-content: end;
+      @media (max-width: 650px) {
+        img {
+          width: 25%;
+        }
+      }
     }
   }
   .selected-cases__top_content {
@@ -95,6 +103,10 @@
       width: 632px;
       height: 600px;
       background-image: url(../images/am-img.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      // background-attachment: fixed;
       @media (max-width: 1280px) {
         width: 90vw;
       }
@@ -111,9 +123,9 @@
         @media (max-width: 1280px) {
           width: 90vw;
         }
-        @media (max-width: 650px) {
-          height: 45vw;
-        }
+        // @media (max-width: 650px) {
+        //   height: 45vw;
+        // }
 
         .selected-cases__wrapper {
           height: 100%;
@@ -149,13 +161,17 @@
           width: 90vw;
         }
         @media (max-width: 650px) {
-          height: 44vw;
+          // height: 44vw;
+          height: fit-content;
         }
 
         .selected-cases__rzd-img {
           width: 530px;
 
           background-image: url(../images/rzd-img.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
         }
         .selected-cases__wrapper {
           h2 {
@@ -172,12 +188,18 @@
         height: 292px;
 
         background-image: url(../images/declarant-img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
         .selected-cases__wrapper {
           height: 87%;
         }
         @media (max-width: 650px) {
           height: 44vw;
           margin-top: 16px;
+        }
+        @media (max-width: 390px) {
+          height: fit-content;
         }
       }
     }
@@ -211,6 +233,9 @@
       height: 424px;
       margin-top: 16px;
       background-image: url(../images/ice-palace-img.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
       @media (max-width: 1280px) {
         width: 44vw;
       }
@@ -221,6 +246,9 @@
       @media (max-width: 600px) {
         width: 90vw;
         //  margin: 0;
+      }
+      @media (max-width: 390px) {
+        height: fit-content;
       }
     }
     .selected-cases__cryptonator {
@@ -228,6 +256,9 @@
       height: 424px;
       margin-top: 16px;
       background-image: url(../images/cryptonator-img.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
       @media (max-width: 1280px) {
         width: 44vw;
       }
@@ -235,43 +266,114 @@
         height: 44vw;
         // margin: 0;
       }
+      @media (max-width: 800px) {
+        background: linear-gradient(
+            rgba(49, 48, 48, 0.8),
+            rgba(13, 13, 13, 0.5)
+          ),
+          url(../images/cryptonator-img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
       @media (max-width: 600px) {
         width: 90vw;
-        //  margin: 0;
+      }
+      @media (max-width: 320px) {
+        height: fit-content;
       }
     }
 
     .selected-cases__bicycle-city {
+      background-image: url(../images/bicycle-city.png);
+
       display: none;
       width: 416px;
       height: 424px;
       margin-top: 16px;
       animation: showBlock 0.5s linear forwards;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      @media (max-width: 1280px) {
+        width: 44vw;
+      }
+      @media (max-width: 850px) {
+        height: 44vw;
+      }
+      @media (max-width: 800px) {
+        background: linear-gradient(
+            rgba(49, 48, 48, 0.8),
+            rgba(13, 13, 13, 0.5)
+          ),
+          url(../images/bicycle-city.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+      @media (max-width: 600px) {
+        width: 90vw;
+      }
+      @media (max-width: 320px) {
+        height: fit-content;
+      }
 
       .selected-cases__text {
         h2,
         p {
           color: $secondary;
+          @media (max-width: 800px) {
+            color: $white;
+          }
         }
       }
-
-      background-image: url(../images/bicycle-city.png);
     }
     .selected-cases__peterhof {
+      background-image: url(../images/peterhof.png);
+
+      // background: linear-gradient(rgba(49, 48, 48, 0.8), rgba(13, 13, 13, 0.5)),
+      //   url(../images/peterhof.png);
       display: none;
       width: 416px;
       height: 424px;
       margin-top: 16px;
       transition: all 0.3s;
       animation: showBlock 0.5s linear forwards;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
 
+      @media (max-width: 1280px) {
+        width: 44vw;
+      }
+      @media (max-width: 850px) {
+        height: 44vw;
+      }
+      @media (max-width: 720px) {
+        background: linear-gradient(
+            rgba(49, 48, 48, 0.8),
+            rgba(13, 13, 13, 0.5)
+          ),
+          url(../images/peterhof.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+      @media (max-width: 600px) {
+        width: 90vw;
+      }
+      @media (max-width: 320px) {
+        height: fit-content;
+      }
       .selected-cases__text {
         h2,
         p {
           color: $secondary;
+          @media (max-width: 720px) {
+            color: $white;
+          }
         }
       }
-      background-image: url(../images/peterhof.png);
     }
     .selected-cases__glonass {
       display: none;
@@ -281,6 +383,22 @@
       animation: showBlock 0.5s linear forwards;
 
       background-image: url(../images/glonass.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      @media (max-width: 1280px) {
+        width: 44vw;
+      }
+      @media (max-width: 850px) {
+        height: 44vw;
+      }
+      @media (max-width: 600px) {
+        width: 90vw;
+      }
+      @media (max-width: 320px) {
+        height: fit-content;
+      }
     }
     .selected-cases__alfa-mk {
       display: none;
@@ -290,6 +408,22 @@
       animation: showBlock 0.5s linear forwards;
 
       background-image: url(../images/alfa-mk.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      @media (max-width: 1280px) {
+        width: 44vw;
+      }
+      @media (max-width: 850px) {
+        height: 44vw;
+      }
+      @media (max-width: 600px) {
+        width: 90vw;
+      }
+      @media (max-width: 390px) {
+        height: fit-content;
+      }
     }
     .selected-cases__add {
       display: flex;

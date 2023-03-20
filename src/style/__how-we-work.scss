@@ -28,6 +28,9 @@
     margin: 0 auto;
     justify-content: center;
   }
+  @media (max-width: 450px) {
+    margin-top: 60px;
+  }
 
   .how-we-work__wrapper {
     display: flex;

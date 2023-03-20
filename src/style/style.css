@@ -455,17 +455,22 @@ content .about-us__header {
     width: 100%;
   }
 }
+@media (max-width: 1100px) {
+  content .about-us__header {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
 @media (max-width: 600px) {
   content .about-us__header {
     height: -moz-fit-content;
     height: fit-content;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 450px) {
   content .about-us__header {
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column;
+    margin-top: 32px;
   }
 }
 content .about-us__header .about-us__text {
@@ -565,9 +570,10 @@ content .about-us__middle div {
   width: 412px;
   height: 240px;
 }
-@media (max-width: 420px) {
+@media (max-width: 450px) {
   content .about-us__middle div {
-    height: 50vw;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 content .about-us__middle .about-us__stat {
@@ -575,6 +581,12 @@ content .about-us__middle .about-us__stat {
   flex-direction: column;
   justify-content: start;
   width: 100%;
+}
+@media (max-width: 450px) {
+  content .about-us__middle .about-us__stat {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 content .about-us__middle .about-us__stat h2 {
   margin: 32px 16px 12px 32px;
@@ -597,6 +609,11 @@ content .about-us__middle .about-us__icon {
 content .about-us__middle .about-us__icon img {
   width: auto;
   height: auto;
+}
+@media (max-width: 450px) {
+  content .about-us__middle .about-us__icon img {
+    width: 25%;
+  }
 }
 content .about-us__middle .about-us__first-box {
   border: #f2f2f2 2px solid;
@@ -675,7 +692,6 @@ content .about-us__partners {
   }
 }
 content .about-us__partners div {
-  margin: 0 26px;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -707,6 +723,11 @@ content .about-us__partners img {
     width: 100vw;
     margin: 0 auto;
     justify-content: center;
+  }
+}
+@media (max-width: 450px) {
+  .how-we-work {
+    margin-top: 60px;
   }
 }
 .how-we-work .how-we-work__wrapper {
@@ -889,6 +910,11 @@ content .about-us__partners img {
     width: 90vw;
   }
 }
+@media (max-width: 450px) {
+  .services__title {
+    margin-top: 60px;
+  }
+}
 .services__title h2 {
   margin: 0;
   font-size: 32px;
@@ -925,15 +951,14 @@ content .about-us__partners img {
     height: 45vw;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .services__content_block {
-    height: 40vw;
-  }
-}
-@media (max-width: 420px) {
-  .services__content_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: -moz-fit-content;
+    height: fit-content;
     border: #f2f2f2 2px solid;
-    height: 50vw;
   }
 }
 .services__content_block .services__description {
@@ -950,20 +975,10 @@ content .about-us__partners img {
     z-index: 2;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .services__content_block .services__description {
-    height: 100%;
-  }
-}
-@media (max-width: 420px) {
-  .services__content_block .services__description {
-    height: 90%;
-    margin: 10px;
-    justify-content: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 90vw;
+    margin: 0;
   }
 }
 .services__content_block .services__description .services__wrapper {
@@ -975,14 +990,11 @@ content .about-us__partners img {
     width: 100%;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .services__content_block .services__description .services__wrapper {
-    margin-top: 10px;
-  }
-}
-@media (max-width: 420px) {
-  .services__content_block .services__description .services__wrapper {
-    margin-top: 20px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 0;
   }
 }
 .services__content_block .services__description .services__wrapper h2 {
@@ -1002,19 +1014,15 @@ content .about-us__partners img {
     line-height: 30px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .services__content_block .services__description .services__wrapper h2 {
-    font-size: 20px;
-    line-height: 26px;
-    width: -moz-max-content;
-    width: max-content;
-  }
-}
-@media (max-width: 420px) {
-  .services__content_block .services__description .services__wrapper h2 {
-    font-size: 24px;
-    width: 100%;
-    margin-bottom: 10px;
+    margin-left: 18px;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 26px;
+    font-size: 26px;
+    line-height: 30px;
+    margin-top: 16px;
   }
 }
 .services__content_block .services__description .services__wrapper p {
@@ -1034,21 +1042,13 @@ content .about-us__partners img {
     line-height: 16px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .services__content_block .services__description .services__wrapper p {
+    margin-left: 18px;
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 12px;
-    margin-bottom: 12px;
-    line-height: 16px;
-  }
-}
-@media (max-width: 420px) {
-  .services__content_block .services__description .services__wrapper p {
-    line-height: 12px;
-    margin-bottom: 22px;
-    font-size: 14px;
-    margin-top: auto;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 @media (max-width: 630px) {
@@ -1056,7 +1056,7 @@ content .about-us__partners img {
     width: 100%;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 550px) {
   .services__content_block .services__description .services__button {
     display: flex;
     flex-direction: row;
@@ -1078,17 +1078,13 @@ content .about-us__partners img {
     width: 100%;
   }
 }
-@media (max-width: 450px) {
-  .services__content_block .services__description .services__button button {
-    height: 63%;
-    width: 70%;
-    font-size: 12px;
-  }
-}
-@media (max-width: 420px) {
+@media (max-width: 550px) {
   .services__content_block .services__description .services__button button {
     height: 30px;
-    margin-bottom: 0;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    width: 90%;
+    font-size: 14px;
   }
 }
 .services__content_block .services__description .services__button .new-button-img {
@@ -1125,7 +1121,7 @@ content .about-us__partners img {
     z-index: 1;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 550px) {
   .services__content_block .services__img {
     display: none;
   }
@@ -1140,7 +1136,7 @@ content .about-us__partners img {
     height: auto;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .services__content_block .services__img img {
     height: auto;
   }
@@ -1181,6 +1177,11 @@ content .about-us__partners img {
 @media (max-width: 1280px) {
   .selected-cases__title {
     width: 90vw;
+  }
+}
+@media (max-width: 450px) {
+  .selected-cases__title {
+    margin-top: 60px;
   }
 }
 .selected-cases__title h2 {
@@ -1224,11 +1225,6 @@ content .about-us__partners img {
     font-size: 26px;
   }
 }
-@media (max-width: 460px) {
-  .selected-cases__content .selected-cases__wrapper .selected-cases__text h2 {
-    font-size: 20px;
-  }
-}
 .selected-cases__content .selected-cases__wrapper .selected-cases__text p {
   font-size: 16px;
   font-weight: 400;
@@ -1242,16 +1238,15 @@ content .about-us__partners img {
     font-size: 14px;
   }
 }
-@media (max-width: 460px) {
-  .selected-cases__content .selected-cases__wrapper .selected-cases__text p {
-    font-size: 12px;
-    line-height: 14px;
-  }
-}
 .selected-cases__content .selected-cases__wrapper .selected-cases__logo {
   display: flex;
   flex-direction: row;
   justify-content: end;
+}
+@media (max-width: 650px) {
+  .selected-cases__content .selected-cases__wrapper .selected-cases__logo img {
+    width: 25%;
+  }
 }
 .selected-cases__content .selected-cases__top_content {
   display: flex;
@@ -1272,6 +1267,9 @@ content .about-us__partners img {
   width: 632px;
   height: 600px;
   background-image: url(../images/am-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 @media (max-width: 1280px) {
   .selected-cases__content .selected-cases__top_content .selected-cases__top_content__left {
@@ -1293,11 +1291,6 @@ content .about-us__partners img {
 @media (max-width: 1280px) {
   .selected-cases__content .selected-cases__top_content .selected-cases__top_content__left .selected-cases__am-block {
     width: 90vw;
-  }
-}
-@media (max-width: 650px) {
-  .selected-cases__content .selected-cases__top_content .selected-cases__top_content__left .selected-cases__am-block {
-    height: 45vw;
   }
 }
 .selected-cases__content .selected-cases__top_content .selected-cases__top_content__left .selected-cases__am-block .selected-cases__wrapper {
@@ -1343,12 +1336,16 @@ content .about-us__partners img {
 }
 @media (max-width: 650px) {
   .selected-cases__content .selected-cases__top_content .selected-cases__top_content__right .selected-cases__rzd_block {
-    height: 44vw;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 .selected-cases__content .selected-cases__top_content .selected-cases__top_content__right .selected-cases__rzd_block .selected-cases__rzd-img {
   width: 530px;
   background-image: url(../images/rzd-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .selected-cases__content .selected-cases__top_content .selected-cases__top_content__right .selected-cases__rzd_block .selected-cases__wrapper h2 {
   color: #14213d;
@@ -1361,6 +1358,9 @@ content .about-us__partners img {
   background-color: beige;
   height: 292px;
   background-image: url(../images/declarant-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .selected-cases__content .selected-cases__top_content .selected-cases__top_content__right .selected-cases__declarant_block .selected-cases__wrapper {
   height: 87%;
@@ -1369,6 +1369,12 @@ content .about-us__partners img {
   .selected-cases__content .selected-cases__top_content .selected-cases__top_content__right .selected-cases__declarant_block {
     height: 44vw;
     margin-top: 16px;
+  }
+}
+@media (max-width: 390px) {
+  .selected-cases__content .selected-cases__top_content .selected-cases__top_content__right .selected-cases__declarant_block {
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 .selected-cases__content .selected-cases__bottom_content {
@@ -1398,6 +1404,9 @@ content .about-us__partners img {
   height: 424px;
   margin-top: 16px;
   background-image: url(../images/ice-palace-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 @media (max-width: 1280px) {
   .selected-cases__content .selected-cases__bottom_content .selected-cases__ice-palace {
@@ -1412,6 +1421,12 @@ content .about-us__partners img {
 @media (max-width: 600px) {
   .selected-cases__content .selected-cases__bottom_content .selected-cases__ice-palace {
     width: 90vw;
+  }
+}
+@media (max-width: 390px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__ice-palace {
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
@@ -1419,6 +1434,9 @@ content .about-us__partners img {
   height: 424px;
   margin-top: 16px;
   background-image: url(../images/cryptonator-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 @media (max-width: 1280px) {
   .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
@@ -1430,35 +1448,125 @@ content .about-us__partners img {
     height: 44vw;
   }
 }
+@media (max-width: 800px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
+    background: linear-gradient(rgba(49, 48, 48, 0.8), rgba(13, 13, 13, 0.5)), url(../images/cryptonator-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
 @media (max-width: 600px) {
   .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
     width: 90vw;
   }
 }
+@media (max-width: 320px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__cryptonator {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city {
+  background-image: url(../images/bicycle-city.png);
   display: none;
   width: 416px;
   height: 424px;
   margin-top: 16px;
   animation: showBlock 0.5s linear forwards;
-  background-image: url(../images/bicycle-city.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (max-width: 1280px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city {
+    width: 44vw;
+  }
+}
+@media (max-width: 850px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city {
+    height: 44vw;
+  }
+}
+@media (max-width: 800px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city {
+    background: linear-gradient(rgba(49, 48, 48, 0.8), rgba(13, 13, 13, 0.5)), url(../images/bicycle-city.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media (max-width: 600px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city {
+    width: 90vw;
+  }
+}
+@media (max-width: 320px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city .selected-cases__text h2,
 .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city .selected-cases__text p {
   color: #14213d;
 }
+@media (max-width: 800px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city .selected-cases__text h2,
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__bicycle-city .selected-cases__text p {
+    color: #ffffff;
+  }
+}
 .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof {
+  background-image: url(../images/peterhof.png);
   display: none;
   width: 416px;
   height: 424px;
   margin-top: 16px;
   transition: all 0.3s;
   animation: showBlock 0.5s linear forwards;
-  background-image: url(../images/peterhof.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (max-width: 1280px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof {
+    width: 44vw;
+  }
+}
+@media (max-width: 850px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof {
+    height: 44vw;
+  }
+}
+@media (max-width: 720px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof {
+    background: linear-gradient(rgba(49, 48, 48, 0.8), rgba(13, 13, 13, 0.5)), url(../images/peterhof.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media (max-width: 600px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof {
+    width: 90vw;
+  }
+}
+@media (max-width: 320px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof .selected-cases__text h2,
 .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof .selected-cases__text p {
   color: #14213d;
+}
+@media (max-width: 720px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof .selected-cases__text h2,
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__peterhof .selected-cases__text p {
+    color: #ffffff;
+  }
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__glonass {
   display: none;
@@ -1467,6 +1575,30 @@ content .about-us__partners img {
   margin-top: 16px;
   animation: showBlock 0.5s linear forwards;
   background-image: url(../images/glonass.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (max-width: 1280px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__glonass {
+    width: 44vw;
+  }
+}
+@media (max-width: 850px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__glonass {
+    height: 44vw;
+  }
+}
+@media (max-width: 600px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__glonass {
+    width: 90vw;
+  }
+}
+@media (max-width: 320px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__glonass {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__alfa-mk {
   display: none;
@@ -1475,6 +1607,30 @@ content .about-us__partners img {
   margin-top: 16px;
   animation: showBlock 0.5s linear forwards;
   background-image: url(../images/alfa-mk.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (max-width: 1280px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__alfa-mk {
+    width: 44vw;
+  }
+}
+@media (max-width: 850px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__alfa-mk {
+    height: 44vw;
+  }
+}
+@media (max-width: 600px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__alfa-mk {
+    width: 90vw;
+  }
+}
+@media (max-width: 390px) {
+  .selected-cases__content .selected-cases__bottom_content .selected-cases__alfa-mk {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 .selected-cases__content .selected-cases__bottom_content .selected-cases__add {
   display: flex;
@@ -1896,11 +2052,12 @@ content .about-us__partners img {
   }
 }
 .footer .footer__wrapper .footer__bottom .footer__info p {
+  font-size: 16px;
   color: #cccccc;
 }
 .footer .footer__wrapper .footer__bottom .footer__year p {
   color: #cccccc;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 body,
