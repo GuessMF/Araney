@@ -471,7 +471,7 @@ content .about-us__header {
 }
 @media (max-width: 450px) {
   content .about-us__header {
-    margin-top: 32px;
+    margin-top: 70px;
   }
 }
 content .about-us__header .about-us__text {
@@ -917,7 +917,7 @@ content .about-us__partners img {
 }
 @media (max-width: 450px) {
   .services__title {
-    margin-top: 60px;
+    margin-top: 100px;
   }
 }
 .services__title h2 {
@@ -1186,7 +1186,7 @@ content .about-us__partners img {
 }
 @media (max-width: 450px) {
   .selected-cases__title {
-    margin-top: 60px;
+    margin-top: 100px;
   }
 }
 .selected-cases__title h2 {
