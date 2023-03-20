@@ -715,32 +715,56 @@ content .about-us__partners img {
 }
 
 .how-we-work {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
   width: 1440px;
   height: 900px;
-  background-color: #14213d;
-  border: none;
 }
-@media (max-width: 1439px) {
-  .how-we-work {
-    width: 100vw;
-    margin: 0 auto;
-    justify-content: center;
-  }
+.how-we-work main {
+  overflow-x: hidden;
+  display: flex;
+  position: sticky;
+  top: 0;
 }
-@media (max-width: 450px) {
-  .how-we-work {
-    margin-top: 60px;
-  }
+.how-we-work h1 {
+  margin: 0;
+  padding: 0;
+}
+.how-we-work section {
+  width: 50vw;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4ch;
+}
+.how-we-work section:nth-child(even) {
+  background-color: teal;
+  color: white;
+}
+.how-we-work .read-article {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  color: #000;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: arial;
+  text-decoration: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 0 100px -20px, rgba(0, 0, 0, 0.3) 0 0 60px -15px;
+}
+.how-we-work .read-article:hover {
+  background: #d5d5d5;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 0 100px -20px, rgba(0, 0, 0, 0.3) 0 0 60px 0px;
+}
+.how-we-work iframe[sandbox] .read-article {
+  display: none;
 }
 .how-we-work .how-we-work__wrapper {
+  overflow-x: hidden;
   display: flex;
-  flex-direction: row;
-  flex: 0 0 auto;
-  width: -moz-fit-content;
-  width: fit-content;
+  position: sticky;
+  top: 0;
   margin-top: 64px;
   margin-left: 80px;
 }

@@ -6,6 +6,58 @@
 
 // })
 
+// let intElemScrollTop = window.scrollTop();
+// console.log(intElemScrollTop);
+
+(function () {
+  init();
+
+  let g_containerInViewport;
+  function init() {
+    setStickyContainersSize();
+    bindEvents();
+  }
+
+  function bindEvents() {
+    window.addEventListener("wheel", wheelHandler);
+  }
+
+  function setStickyContainersSize() {
+    document.querySelectorAll(".how-we-work").forEach(function (container) {
+      const stikyContainerHeight = container.querySelector("main").scrollWidth;
+      container.setAttribute("style", "height: " + stikyContainerHeight + "px");
+    });
+  }
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
+  }
+
+  function wheelHandler(evt) {
+    const containerInViewPort = Array.from(
+      document.querySelectorAll(".how-we-work")
+    ).filter(function (container) {
+      return isElementInViewport(container);
+    })[0];
+
+    if (!containerInViewPort) {
+      return;
+    }
+
+    var isPlaceHolderBelowTop =
+      containerInViewPort.offsetTop < document.documentElement.scrollTop;
+    var isPlaceHolderBelowBottom =
+      containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
+      document.documentElement.scrollTop;
+    let g_canScrollHorizontally =
+      isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
+
+    if (g_canScrollHorizontally) {
+      containerInViewPort.querySelector("main").scrollLeft += evt.deltaY;
+    }
+  }
+})();
 //
 //
 //
@@ -50,6 +102,7 @@
 // };
 
 // const target2 = document.querySelector(".step-4");
+// const howWeWork = document.querySelector(".how-we-work");
 // const callback = function (entries, observer) {
 //   entries.forEach((entry) => {
 //     const {isIntersecting} = entry;
@@ -57,44 +110,53 @@
 //     console.log(isIntersecting + " is");
 //     direction = "";
 
-//     if (isIntersecting) {
-//       blockScroll = true;
-//       disabledScroll();
-//       console.log(blockScroll + "Block srooll srabotal");
+// if (isIntersecting) {
+//   blockScroll = true;
+//   disabledScroll();
+//   console.log(blockScroll + "Block srooll srabotal");
+//   howWeWork.addEventListener("wheel", (evt) => {
+//     evt.preventDefault();
+//     howWeWork.scrollLeft += evt.deltaY;
+//     console.log(howWeWork.scrollLeft);
+//     if (howWeWork.scrollLeft > 2080) {
+//       evt.preventDefault();
+//       document.body.style.cssText = ` overflow:scroll`;
+//       window.scrollDown += evt.deltaY;
+//     }
+//   });
 
-//       window.addEventListener("wheel", (e) => {
-//         if (e.deltaY < 0) {
-//           if (direction !== "up" || target.scrollLeft > 10) {
-//             console.log("up");
-//             target.scrollLeft -= 700;
-//             console.log(target.scrollLeft);
-//             target.scrollLeft < 10
-//               ? (document.body.style.cssText = ` overflow:scroll`)
-//               : null;
-//             direction = "up";
-//           }
-//         }
-//         if (e.deltaY > 0) {
-//           if (direction !== "down" || target.scrollLeft < 2080) {
-//             console.log("down");
-//             target.scrollLeft += 700;
-//             target.scrollLeft > 2080
-//               ? (document.body.style.cssText = ` overflow:scroll`)
-//               : null;
-//             direction = "down";
-//           }
-//         }
-//       });
+// window.addEventListener("wheel", (e) => {
+//   if (e.deltaY < 0) {
+//     if (direction !== "up" || target.scrollLeft > 10) {
+//       console.log("up");
+//       target.scrollLeft -= 100;
+//       console.log(target.scrollLeft);
+//       target.scrollLeft < 10
+//         ? (document.body.style.cssText = ` overflow:scroll`)
+//         : null;
+//       direction = "up";
+//     }
+//   }
+//   if (e.deltaY > 0) {
+//     if (direction !== "down" || target.scrollLeft < 2080) {
+//       console.log("down");
+//       target.scrollLeft += 100;
+//       target.scrollLeft > 2080
+//         ? (document.body.style.cssText = ` overflow:scroll`)
+//         : null;
+//       direction = "down";
+//     }
+//   }
+// });
 //     } else {
 //       blockScroll = false;
 //     }
 //     console.log(blockScroll);
 //   });
-//};
+// };
 
-// const observer = new IntersectionObserver(callback, options);
-
-// observer.observe(target);
+const observer = new IntersectionObserver(callback, options);
+observer.observe(target);
 
 //Закрытие гамбургер меню
 const items = document.querySelector(".menu-items");
