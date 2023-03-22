@@ -3,10 +3,10 @@
   height: auto;
 
   main {
-    //  overflow-x: hidden;
+    overflow-x: hidden;
     // overflow-x: auto;
     display: flex;
-    // position: sticky;
+
     position: -webkit-sticky;
     position: -moz-sticky;
     position: -o-sticky;
@@ -14,10 +14,10 @@
     position: sticky;
     top: 0;
 
-    // width: 100vw;
+    width: 100vw;
 
-    overflow-x: scroll;
-    width: inherit;
+    // overflow-x: scroll;
+    // width: inherit;
   }
   section {
     min-width: 50%;

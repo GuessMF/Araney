@@ -721,14 +721,14 @@ content .about-us__partners img {
   height: auto;
 }
 .how-we-work main {
+  overflow-x: hidden;
   display: flex;
   position: -moz-sticky;
   position: -o-sticky;
   position: -ms-sticky;
   position: sticky;
   top: 0;
-  overflow-x: scroll;
-  width: inherit;
+  width: 100vw;
 }
 .how-we-work section {
   min-width: 50%;
