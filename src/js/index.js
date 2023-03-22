@@ -22,7 +22,7 @@ console.log(scrollBlock.getBoundingClientRect());
   }
 
   function bindEvents() {
-    window.addEventListener("scroll", wheelHandler);
+    window.addEventListener("wheel", wheelHandler);
   }
 
   function setStickyContainersSize() {
