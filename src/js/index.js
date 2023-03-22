@@ -8,10 +8,10 @@
 
 // let intElemScrollTop = window.scrollTop();
 // console.log(intElemScrollTop);
-/**
- * By Alvaro Trigo
- * Follow me on Twitter: https://twitter.com/imac2
- */
+
+const scrollBlock = document.querySelector(".how-we-work");
+console.log(scrollBlock.getBoundingClientRect());
+
 (function () {
   init();
 
@@ -33,7 +33,7 @@
           container.querySelector("main").scrollWidth;
         container.setAttribute(
           "style",
-          "height: " + stikyContainerHeight / 1.5 + "px"
+          "height: " + stikyContainerHeight + "px"
         );
       });
   }
