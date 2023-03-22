@@ -9,8 +9,12 @@
 // let intElemScrollTop = window.scrollTop();
 // console.log(intElemScrollTop);
 
-const scrollBlock = document.querySelector(".how-we-work");
-console.log(scrollBlock.getBoundingClientRect());
+let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+let eventName = isMobile ? "touchmove" : "wheel";
+// document.addEventListener(eventName, (e) => {
+//   let delta = e.deltaY || e.touches[0].clientY - startY;
+//   // do something with delta
+// });
 
 (function () {
   init();
@@ -22,7 +26,7 @@ console.log(scrollBlock.getBoundingClientRect());
   }
 
   function bindEvents() {
-    window.addEventListener("wheel", wheelHandler);
+    window.addEventListener(eventName, wheelHandler);
   }
 
   function setStickyContainersSize() {
