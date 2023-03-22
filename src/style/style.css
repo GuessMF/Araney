@@ -721,7 +721,11 @@ content .about-us__partners img {
   height: auto;
 }
 .how-we-work main {
+  overflow-x: hidden;
   display: flex;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
   position: sticky;
   top: 0;
   width: 100vw;
@@ -2010,10 +2014,6 @@ body,
 html {
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
-}
-body ::-webkit-scrollbar,
-html ::-webkit-scrollbar {
-  width: 0;
 }
 
 #app {

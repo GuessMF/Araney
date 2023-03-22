@@ -3,8 +3,13 @@
   height: auto;
 
   main {
-    // overflow-x: hidden;
+    overflow-x: hidden;
     display: flex;
+    // position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
     position: sticky;
     top: 0;
 
@@ -109,166 +114,4 @@
       }
     }
   }
-  //
-  //
-  //
-  //
-  //
-
-  // .how-we-work__wrapper {
-  //   overflow-x: hidden;
-  //   display: flex;
-  //   position: sticky;
-  //   top: 0;
-
-  //   // display: flex;
-  //   // flex-direction: row;
-  //   // flex: 0 0 auto;
-  //   // width: fit-content;
-
-  //   margin-top: 64px;
-  //   margin-left: 80px;
-  //   //  border: #f2f2f2 1px solid;
-  //   @media (max-width: 1439px) {
-  //     margin: 32px auto;
-  //   }
-  //   @media (max-width: 1280px) {
-  //     width: 90vw;
-  //   }
-
-  //   .how-we-work__block {
-  //     width: 600px;
-  //     margin-right: 100px;
-  //     @media (max-width: 1439px) {
-  //       margin-right: 0;
-  //       margin-left: 0;
-  //     }
-  //     @media (max-width: 1280px) {
-  //       width: 50vw;
-  //     }
-
-  //     .how-we-work__title {
-  //       @media (max-width: 420px) {
-  //         justify-content: center;
-  //         display: flex;
-  //         flex-direction: column;
-  //         align-items: center;
-  //       }
-  //       h1 {
-  //         color: $white;
-  //         font-weight: 700;
-  //         font-size: 64px;
-  //         color: #14213d;
-  //         text-shadow: -0 -1px 1px #f2f2f2, 0 -1px 1px #f2f2f2,
-  //           -0 1px 1px #f2f2f2, 0 1px 1px #f2f2f2, -1px -0 1px #f2f2f2,
-  //           1px -0 1px #f2f2f2, -1px 0 1px #f2f2f2, 1px 0 1px #f2f2f2,
-  //           -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2, -1px 1px 1px #f2f2f2,
-  //           1px 1px 1px #f2f2f2, -1px -1px 1px #f2f2f2, 1px -1px 1px #f2f2f2,
-  //           -1px 1px 1px #f2f2f2, 1px 1px 1px #f2f2f2;
-  //         @media (max-width: 420px) {
-  //           margin: 0 auto;
-  //           width: 90%;
-  //           font-size: 60px;
-  //         }
-  //         @media (max-width: 320px) {
-  //           font-size: 50px;
-  //         }
-  //       }
-  //       p {
-  //         width: 520px;
-  //         color: $white;
-  //         font-size: 20px;
-  //         line-height: 30px;
-  //         font-weight: 400;
-  //         @media (max-width: 1280px) {
-  //           width: 80%;
-  //         }
-  //         @media (max-width: 420px) {
-  //           margin: 60px auto;
-  //           width: 90%;
-  //           line-height: 50px;
-  //         }
-  //         @media (max-width: 320px) {
-  //           font-size: 18px;
-  //         }
-  //       }
-  //     }
-  //   }
-  //   .how-we-work__right-content {
-  //     display: flex;
-  //     flex-direction: column;
-  //     align-items: center;
-  //     justify-content: center;
-  //     margin-right: 100px;
-  //     //  border: #f2f2f2 1px solid;
-  //     @media (max-width: 1280px) {
-  //       width: 50vw;
-  //     }
-
-  //     .how-we-work__text {
-  //       width: 552px;
-  //       margin: 24px;
-  //       @media (max-width: 1280px) {
-  //         width: 90%;
-  //       }
-
-  //       span {
-  //         color: $orange;
-  //         font-size: 20px;
-  //         font-weight: 700;
-  //         line-height: 30px;
-  //       }
-  //       h1 {
-  //         font-size: 40px;
-  //         color: $white;
-  //       }
-  //       p {
-  //         font-size: 20px;
-  //         font-weight: 400;
-  //         color: $white;
-  //         line-height: 30px;
-  //       }
-  //     }
-  //     img {
-  //       width: 405px;
-  //       height: 402px;
-  //       margin-bottom: 71px;
-  //     }
-  //   }
-  //   .description {
-  //     // display: none;
-  //     @media (max-width: 1280px) {
-  //       width: 50vw;
-  //       @media (max-width: 850px) {
-  //         display: flex;
-  //         flex-direction: column;
-  //         justify-content: center;
-  //         width: 100vw;
-  //       }
-  //     }
-  //   }
-  //   .step-1 {
-  //     // display: none;
-  //     @media (max-width: 1280px) {
-  //       margin-right: 0;
-  //     }
-  //     @media (max-width: 850px) {
-  //       display: none;
-  //     }
-  //   }
-  //   .step-2 {
-  //     @media (max-width: 1439px) {
-  //       //  display: none !important;
-  //     }
-  //   }
-  //   .step-3 {
-  //     @media (max-width: 1439px) {
-  //       //  display: none !important;
-  //     }
-  //   }
-  //   .step-4 {
-  //     //  display: none !important;
-  //     margin-right: 50px;
-  //   }
-  // }
 }
