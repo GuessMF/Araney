@@ -3,7 +3,8 @@
   height: auto;
 
   main {
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    overflow-x: auto;
     display: flex;
     // position: sticky;
     position: -webkit-sticky;

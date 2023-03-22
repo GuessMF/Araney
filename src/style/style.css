@@ -721,7 +721,7 @@ content .about-us__partners img {
   height: auto;
 }
 .how-we-work main {
-  overflow-x: hidden;
+  overflow-x: auto;
   display: flex;
   position: -moz-sticky;
   position: -o-sticky;
