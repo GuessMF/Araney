@@ -1,27 +1,10 @@
 .header {
-  // display: flex;
-  // //flex-direction: row;
-  // //justify-content: space-between;
-  // // justify-content: center;
-  // //align-items: center;
-  // width: 100%;
-  // height: 80px;
-  // padding: 16px 80px;
-  // border: none;
-  // max-width: 1440px;
-  // //display: none;
-  // width: 100vw;
-  // margin: 0 auto;
-  // padding: 0;
-
-  // flex-direction: row-reverse;
-
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
   z-index: 50;
-  // display: none;
+  background-color: $white;
   .container {
     max-width: 1050px;
     width: 90%;
@@ -66,10 +49,6 @@
     padding: 0.7rem;
   }
 
-  .navbar .nav-container a:hover {
-    // font-weight: bolder;
-  }
-
   .nav-container {
     display: block;
     position: relative;
@@ -87,11 +66,7 @@
     z-index: 5;
     opacity: 0;
     cursor: pointer;
-
     position: absolute;
-    //right: 0;
-    /* top: 100px; */
-    //left: auto;
   }
 
   .nav-container .hamburger-lines {
@@ -105,12 +80,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     position: absolute;
-    // right: 0;
-
-    /* top: 100px; */
-    // left: auto;
   }
 
   .nav-container .hamburger-lines .line {
@@ -138,35 +108,24 @@
   .navbar .menu-items {
     margin: 0 auto;
     padding-top: 120px;
-    // box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-    // box-shadow: inset 0vw 60vw 100vw rgb(178 133 28 / 50%);
-    // box-shadow: inset 0vw 60vw 100vw $white;
-
     height: 100vh;
     width: 100%;
     transform: translate(-150%);
     display: flex;
     flex-direction: column;
-    // margin-left: -40px;
-    //  padding-left: 50px;
     transition: transform 0.5s ease-in-out;
     text-align: center;
     justify-content: start;
     width: 100vw;
-    // background-color: antiquewhite;
     background-color: $white;
+
     img {
       margin-top: 15vw;
     }
   }
 
   .navbar .menu-items li {
-    // margin-bottom: 1.2rem;
-    // font-size: 1.5rem;
-    // font-weight: 500;
     height: 10vh;
-    // border: black 1px solid;
-    // background-color: antiquewhite;
     font-size: 16px;
     font-weight: 600;
     display: flex;
@@ -177,11 +136,9 @@
     align-self: center;
     margin-bottom: 1%;
     background-color: $white;
-    //  a {
+
     &:hover {
       border-bottom: solid 3px $orange;
-      //margin-bottom: -3px;
-      //   }
     }
   }
 
@@ -191,19 +148,11 @@
     right: 15px;
     font-size: 1.2rem;
     color: #0e2431;
-
     left: 0;
     top: 0;
-
-    // height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    // height: 80px;
-    // justify-content: left;
-    // width: 50vw;
-    // margin: 0;
 
     height: 60px;
     justify-content: left;
@@ -211,7 +160,6 @@
     top: 8px;
     transition: all 0.2s ease-in-out;
     img {
-      // width: 19vw;
       width: 150px;
       height: auto;
       margin: 0;
@@ -247,24 +195,24 @@
   .header__wrapper {
     display: flex;
     flex-direction: row;
-    //justify-content: center;
     align-items: center;
     font-size: 16px;
     font-weight: 600;
 
     padding: 10px 80px;
-    // width: 100%;
     width: 90vw;
+    margin: 0 auto;
+    max-width: 1440px;
     height: 80px;
     justify-content: center;
     background-color: $white;
+
     @media (max-width: 1439px) {
       padding: 10px 80px;
-      // width: 100%;
+
       justify-content: center;
     }
     @media (max-width: 1280px) {
-      //  padding: 10px 10px;
     }
     @media (max-width: 1020px) {
       display: none;
@@ -276,16 +224,16 @@
       align-items: center;
       height: 100%;
       padding: 12px 24px;
+
       a {
         text-decoration: none;
         color: $secondary-light;
-        // border: black 1px solid;
         height: 40%;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
-      // transition: all 2s ease-out;
+
       &:hover {
         a {
           border-bottom: solid 3px $orange;
@@ -300,11 +248,8 @@
   }
   .header__logo {
     margin-left: 0;
-    // @media (max-width: 1439px) {
-    //   margin-left: 0;
-    // }
-    //width: 40vw;
     width: 150px;
+
     @media (max-width: 1280px) {
       margin-left: auto;
       margin-right: auto;
@@ -319,7 +264,6 @@
       color: $white;
       font-style: normal;
       font-size: 14px;
-
       border: none;
     }
     margin-left: auto;

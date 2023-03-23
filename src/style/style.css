@@ -1,10 +1,11 @@
 @import "normalize.css";
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
   z-index: 50;
+  background-color: #ffffff;
 }
 .header .container {
   max-width: 1050px;
@@ -63,7 +64,6 @@
   opacity: 0;
   cursor: pointer;
   position: absolute;
-  /* top: 100px; */
 }
 .header .nav-container .hamburger-lines {
   display: block;
@@ -77,7 +77,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  /* top: 100px; */
 }
 .header .nav-container .hamburger-lines .line {
   display: block;
@@ -184,6 +183,8 @@
   font-weight: 600;
   padding: 10px 80px;
   width: 90vw;
+  margin: 0 auto;
+  max-width: 1440px;
   height: 80px;
   justify-content: center;
   background-color: #ffffff;
@@ -254,7 +255,8 @@
 .welcome-screen {
   display: flex;
   flex-direction: row;
-  width: 1440px;
+  width: 100vw;
+  justify-content: center;
   height: 700px;
   background: linear-gradient(103.2deg, #14213d 0%, #28427b 111.47%);
   border: none;
@@ -1587,6 +1589,7 @@ content .about-us__partners img {
   height: 424px;
   margin-top: 16px;
   background-color: #14213d;
+  cursor: pointer;
 }
 @media (max-width: 1280px) {
   .selected-cases__content .selected-cases__bottom_content .selected-cases__add {
@@ -1940,7 +1943,7 @@ content .about-us__partners img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  width: 100vw;
   height: 235px;
   background-color: #14213d;
 }

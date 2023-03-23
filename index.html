@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -57,11 +56,13 @@
           </div>
         </nav>
         <div class="header__wrapper">
-          <img
-            class="header__logo"
-            src="./src/images/header-logo.png"
-            alt="header-logo"
-          />
+          <a href="/">
+            <img
+              class="header__logo"
+              src="./src/images/header-logo.png"
+              alt="header-logo"
+          /></a>
+
           <div class="header__about-us"><a href="#about">О нас</a></div>
           <div class="header__working">
             <a href="#how-we-work">Как мы работаем</a>
@@ -78,7 +79,7 @@
         </div>
       </header>
       <main>
-        <div class="welcome-screen">
+        <div class="welcome-screen" id="welcome-screen">
           <div class="welcome-screen__left-box">
             <div class="welcome-screen__info">
               <div class="welcome-screen__title">

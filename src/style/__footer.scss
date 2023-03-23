@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  width: 100vw;
   height: 235px;
   background-color: $secondary;
-  // display: none;
+
   @media (max-width: 1439px) {
     width: 100vw;
   }

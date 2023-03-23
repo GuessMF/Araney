@@ -1,19 +1,15 @@
 .welcome-screen {
   display: flex;
   flex-direction: row;
-  width: 1440px;
+  width: 100vw;
+  justify-content: center;
   height: 700px;
   background: linear-gradient(103.2deg, #14213d 0%, #28427b 111.47%);
   border: none;
-  //display: none;
-  // margin-top: 80px;
   margin: 0 auto;
-  // justify-content: center;
-  // width: 100vw;
+
   @media (max-width: 1439px) {
-    //width: 100%;
     width: 100vw;
-    // width: 1000px;
     margin: 0 auto;
   }
   @media (max-width: 380px) {
@@ -30,8 +26,6 @@
   color: $white;
   @media (max-width: 1439px) {
     width: 50%;
-    // width: 100vw;
-    // width: 1000px;
   }
 
   .welcome-screen__info {
@@ -99,8 +93,6 @@
   background-image: url(../images/welcome-screen.png);
   @media (max-width: 1439px) {
     width: 50%;
-    // width: 100vw;
-    // width: 1000px;
   }
   @media (max-width: 600px) {
     z-index: 1;

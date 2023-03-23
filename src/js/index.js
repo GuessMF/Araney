@@ -1,57 +1,9 @@
-// const element = document.querySelector(".step-3");
-
-// element.scrollIntoView(false);
-
-// window.addEventListener("wheel", function (e) {
-
-// })
-
-// let intElemScrollTop = window.scrollTop();
-// console.log(intElemScrollTop);
-
 let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 let eventName = isMobile ? "touchmove" : "wheel";
-// document.addEventListener(eventName, (e) => {
-//   let delta = e.deltaY || e.touches[0].clientY - startY;
-//   // do something with delta
-// });
+
 console.log(eventName);
 
-// let check = null;
-
-// document.addEventListener("touchstart", function (e) {
-//   check = e;
-// });
-// document.addEventListener("touchmove", function (e) {
-//   if (check) {
-//     // console.log("Move delta: " + (e.touches[0].pageY - check.touches[0].pageY));
-//   }
-// });
-// document.addEventListener("touched", function (e) {
-//   check = null;
-// });
-// window.addEventListener("touchstart", touchStart, false);
-// window.addEventListener("touchmove", touchMove, false);
-
-// var start = {x: 0, y: 0};
-
-// function touchStart(event) {
-//   start.x = event.touches[0].pageX;
-//   start.y = event.touches[0].pageY;
-// }
-
-// function touchMove(event) {
-//   offset = {};
-
-//   offset.x = start.x - event.touches[0].pageX;
-//   offset.y = start.y - event.touches[0].pageY;
-//   //console.log(offset.y);
-//   return offset;
-// }
-// console.log(offset.y);
-
 window.addEventListener("touchstart", touchStart, false);
-//window.addEventListener("touchmove", touchMove, false);
 
 let start = {y: 0};
 let started = 0;
@@ -59,18 +11,8 @@ function touchStart(event) {
   start.y = event.touches[0].clientY;
 }
 
-// function touchMove(event) {
-//   //event.preventDefault();
-//   offset = {};
-//   // console.log("start" + start.y);
-//   offset = start.y - event.touches[0].clientY;
-//   return offset;
-// }
-
 (function () {
   init();
-
-  //let g_containerInViewport;
   function init() {
     setStickyContainersSize();
     bindEvents();
@@ -95,7 +37,6 @@ function touchStart(event) {
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
-    // console.log(rect.top);
     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
   }
 
@@ -112,7 +53,6 @@ function touchStart(event) {
 
     let isPlaceHolderBelowTop =
       containerInViewPort.offsetTop < document.documentElement.scrollTop;
-    // console.log(isPlaceHolderBelowTop + "isPlaceHolderBelowTop");
 
     let isPlaceHolderBelowBottom =
       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
@@ -123,17 +63,15 @@ function touchStart(event) {
 
     if (g_canScrollHorizontally) {
       containerInViewPort.querySelector("main").scrollLeft += evt.deltaY;
-      console.log(containerInViewPort.querySelector("main").scrollLeft);
     }
 
     if (g_canScrollHorizontally && eventName == "touchmove") {
       offset = {};
-
       offset = start.y - evt.touches[0].clientY;
-      // console.log(offset);
-      started += offset / 10;
-      // console.log(started + "  started");
+      started += offset / 20;
+      console.log(started + "  started");
       containerInViewPort.querySelector("main").scrollLeft += started;
+      console.log(containerInViewPort.querySelector("main").scrollLeft);
     }
   }
 })();
