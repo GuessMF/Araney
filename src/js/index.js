@@ -125,43 +125,17 @@ function touchStart(event) {
     }
 
     if (g_canScrollHorizontally && eventName == "touchmove") {
-      // console.log(containerInViewPort.querySelector("main").scrollLeft);
-      // window.addEventListener("touchstart", touchStart, false);
-      // window.addEventListener("touchmove", touchMove, false);
-      // let start = {y: 0};
-      // function touchStart(event) {
-      //   start.y = event.touches[0].clientY;
-      // }
-      // function touchMove(event) {
-      //   event.preventDefault();
-      //   offset = {};
-      //   console.log("start" + start.y);
-      //   offset = start.y - event.touches[0].clientY;
-      //   return offset;
-      // }
-      // console.log(start.y);
-
       offset = {};
-      // console.log("start" + start.y);
+
       offset = start.y - evt.touches[0].clientY;
       console.log(offset);
       started += offset / 10;
       console.log(started + "  started");
       containerInViewPort.querySelector("main").scrollLeft += started;
-      // console.log(containerInViewPort.querySelector("main").scrollLeft);
     }
   }
 })();
 
-// let start = {y: 0};
-
-// window.addEventListener("touchstart", touchStart, false);
-// function touchStart(event) {
-//   // start.x = event.touches[0].clientX;
-//   start.y = event.touches[0].clientY;
-//   // console.log("start" + start.y);
-// }
-// console.log(start.y);
 //
 //
 //
