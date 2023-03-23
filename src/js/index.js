@@ -15,6 +15,21 @@ let eventName = isMobile ? "touchmove" : "wheel";
 //   let delta = e.deltaY || e.touches[0].clientY - startY;
 //   // do something with delta
 // });
+console.log(eventName);
+
+// let check = null;
+
+// document.addEventListener("touchstart", function (e) {
+//   check = e;
+// });
+// document.addEventListener("touchmove", function (e) {
+//   if (check) {
+//     // console.log("Move delta: " + (e.touches[0].pageY - check.touches[0].pageY));
+//   }
+// });
+// document.addEventListener("touched", function (e) {
+//   check = null;
+// });
 
 (function () {
   init();
@@ -65,73 +80,27 @@ let eventName = isMobile ? "touchmove" : "wheel";
     let isPlaceHolderBelowBottom =
       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
       document.documentElement.scrollTop;
+
     let g_canScrollHorizontally =
       isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
 
     if (g_canScrollHorizontally) {
       containerInViewPort.querySelector("main").scrollLeft += evt.deltaY;
     }
+
+    if (g_canScrollHorizontally && eventName == "touchmove") {
+      var startX, startY;
+      window.addEventListener("touchstart", (evt) => {
+        startX = evt.touches[0].clientX;
+        startY = evt.touches[0].clientY;
+      });
+      var deltaX = evt.touches[0].clientX - startX,
+        deltaY = evt.touches[0].clientY - startY;
+      console.log("Delta x,y", deltaX, deltaY);
+    }
   }
 })();
 
-// (function () {
-//   init();
-
-//   var g_containerInViewport;
-//   function init() {
-//     setStickyContainersSize();
-//     bindEvents();
-//   }
-
-//   function bindEvents() {
-//     window.addEventListener("wheel", wheelHandler);
-//   }
-
-//   function setStickyContainersSize() {
-//     document.querySelectorAll(".how-we-work").forEach(function (container) {
-//       const stikyContainerHeight =
-//         container.querySelector(".wrapper-sticky").scrollWidth;
-//       container.setAttribute("style", "height: " + stikyContainerHeight + "px");
-//       console.log(stikyContainerHeight + "stikyContainerHeight");
-//     });
-//   }
-
-//   function isElementInViewport(el) {
-//     const rect = el.getBoundingClientRect();
-//     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
-//   }
-
-//   function wheelHandler(evt) {
-//     const containerInViewPort = Array.from(
-//       document.querySelectorAll(".how-we-work")
-//     ).filter(function (container) {
-//       //console.log(container);
-//       return isElementInViewport(container);
-//     })[0];
-//     console.log(containerInViewPort);
-
-//     if (!containerInViewPort) {
-//       return;
-//     }
-
-//     let isPlaceHolderBelowTop =
-//       containerInViewPort.offsetTop < document.documentElement.scrollTop;
-
-//     // console.log(isPlaceHolderBelowTop + "isPlaceHolderBelowTop");
-//     let isPlaceHolderBelowBottom =
-//       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
-//       document.documentElement.scrollTop;
-//     // console.log(isPlaceHolderBelowBottom + "isPlaceHolderBelowBottom");
-//     let g_canScrollHorizontally =
-//       isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
-//     //console.log(isPlaceHolderBelowBottom + "isPlaceHolderBelowBottom");
-
-//     if (g_canScrollHorizontally) {
-//       containerInViewPort.querySelector(".wrapper-sticky").scrollLeft +=
-//         evt.deltaY;
-//     }
-//   }
-// })();
 //
 //
 //
@@ -152,85 +121,6 @@ let eventName = isMobile ? "touchmove" : "wheel";
 //
 //
 //
-//
-
-// function disabledScroll() {
-//   document.body.style.cssText = ` overflow: hidden`;
-// }
-// const target = document.querySelector("#how-we-work");
-// function horizontalSkroll() {
-//   window.addEventListener("wheel", function (e) {
-//     if (e.deltaY > 0 && blockScroll == true) {
-//       target.scrollLeft += 700;
-//       console.log(target.scrollLeft + " Left");
-//     } else if (e.deltaY < 0 && blockScroll == true) {
-//       target.scrollLeft -= 700;
-//       console.log(target.scrollLeft + "Left");
-//     }
-//   });
-// }
-
-// const options = {
-//   threshold: 0.5,
-//   rootMargin: "0px 0px -48% 0px",
-// };
-
-// const target2 = document.querySelector(".step-4");
-// const howWeWork = document.querySelector(".how-we-work");
-// const callback = function (entries, observer) {
-//   entries.forEach((entry) => {
-//     const {isIntersecting} = entry;
-//     let blockScroll = false;
-//     console.log(isIntersecting + " is");
-//     direction = "";
-
-// if (isIntersecting) {
-//   blockScroll = true;
-//   disabledScroll();
-//   console.log(blockScroll + "Block srooll srabotal");
-//   howWeWork.addEventListener("wheel", (evt) => {
-//     evt.preventDefault();
-//     howWeWork.scrollLeft += evt.deltaY;
-//     console.log(howWeWork.scrollLeft);
-//     if (howWeWork.scrollLeft > 2080) {
-//       evt.preventDefault();
-//       document.body.style.cssText = ` overflow:scroll`;
-//       window.scrollDown += evt.deltaY;
-//     }
-//   });
-
-// window.addEventListener("wheel", (e) => {
-//   if (e.deltaY < 0) {
-//     if (direction !== "up" || target.scrollLeft > 10) {
-//       console.log("up");
-//       target.scrollLeft -= 100;
-//       console.log(target.scrollLeft);
-//       target.scrollLeft < 10
-//         ? (document.body.style.cssText = ` overflow:scroll`)
-//         : null;
-//       direction = "up";
-//     }
-//   }
-//   if (e.deltaY > 0) {
-//     if (direction !== "down" || target.scrollLeft < 2080) {
-//       console.log("down");
-//       target.scrollLeft += 100;
-//       target.scrollLeft > 2080
-//         ? (document.body.style.cssText = ` overflow:scroll`)
-//         : null;
-//       direction = "down";
-//     }
-//   }
-// });
-//     } else {
-//       blockScroll = false;
-//     }
-//     console.log(blockScroll);
-//   });
-// };
-
-// const observer = new IntersectionObserver(callback, options);
-// observer.observe(target);
 
 //Закрытие гамбургер меню
 const items = document.querySelector(".menu-items");
