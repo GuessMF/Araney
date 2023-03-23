@@ -27,7 +27,7 @@ function touchStart(event) {
       .querySelectorAll(".sticky-container")
       .forEach(function (container) {
         const stikyContainerHeight =
-          container.querySelector("main").scrollWidth * 0.8;
+          container.querySelector("main").scrollWidth;
         // console.log(container.querySelector("main").scrollWidth);
         container.setAttribute(
           "style",
@@ -46,7 +46,7 @@ function touchStart(event) {
     //     " document.documentElement.clientHeight"
     // );
     // return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight; рабочее на компе
-
+    //  console.log("hello");
     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
   }
 
@@ -56,8 +56,14 @@ function touchStart(event) {
     ).filter(function (container) {
       return isElementInViewport(container);
     })[0];
+    // if (containerInViewPort) {
+    //   console.log("hello");
+    //   const rect = el.getBoundingClientRect();
+    //   console.log(rect.top);
+    // }
 
     if (!containerInViewPort) {
+      //console.log("no hello");
       return;
     }
 
@@ -91,6 +97,7 @@ function touchStart(event) {
     }
   }
 })();
+
 // window.addEventListener("scroll", function () {
 //   if (window.pageYOffset >= rect.top) {
 //     console.log(window.pageYOffset);
