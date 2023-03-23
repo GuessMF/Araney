@@ -11,6 +11,7 @@ function touchStart(event) {
   start.y = event.touches[0].clientY;
 }
 
+let toContent;
 (function () {
   init();
   function init() {
@@ -50,6 +51,8 @@ function touchStart(event) {
       //   {passive: false}
       // );
     }
+    //console.log(rect.top + "rect.top");
+    toContent = rect.top;
     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
   }
 
@@ -62,7 +65,7 @@ function touchStart(event) {
     // if (containerInViewPort) {
     //   console.log("hello");
     //   const rect = el.getBoundingClientRect();
-    //   console.log(rect.top);
+
     // }
 
     if (!containerInViewPort) {
@@ -117,20 +120,22 @@ function touchStart(event) {
 //   false
 // );
 
+//console.log(toContent);
 window.addEventListener("scroll", function () {
   // console.log(window.pageYOffset);
-  if (window.pageYOffset > 2300 && window.pageYOffset <= 2320) {
+  console.log(toContent);
+  if (toContent <= 0) {
     //&& window.pageYOffset <= 3525
     console.log("visible");
     console.log(window.pageYOffset);
     document.body.style.overflow = "hidden";
-    setTimeout(() => {
-      document.body.style.overflow = "visible";
-    }, 1000);
+    // setTimeout(() => {
+    //   document.body.style.overflow = "visible";
+    // }, 1000);
   }
-  if (window.pageYOffset >= 3501) {
-    document.body.style.overflow = "visible";
-  }
+  // if (window.pageYOffset >= 3501) {
+  //   document.body.style.overflow = "visible";
+  // }
 });
 
 //
