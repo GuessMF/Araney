@@ -30,6 +30,42 @@ console.log(eventName);
 // document.addEventListener("touched", function (e) {
 //   check = null;
 // });
+// window.addEventListener("touchstart", touchStart, false);
+// window.addEventListener("touchmove", touchMove, false);
+
+// var start = {x: 0, y: 0};
+
+// function touchStart(event) {
+//   start.x = event.touches[0].pageX;
+//   start.y = event.touches[0].pageY;
+// }
+
+// function touchMove(event) {
+//   offset = {};
+
+//   offset.x = start.x - event.touches[0].pageX;
+//   offset.y = start.y - event.touches[0].pageY;
+//   //console.log(offset.y);
+//   return offset;
+// }
+// console.log(offset.y);
+
+window.addEventListener("touchstart", touchStart, false);
+//window.addEventListener("touchmove", touchMove, false);
+
+let start = {y: 0};
+let started = 0;
+function touchStart(event) {
+  start.y = event.touches[0].clientY;
+}
+
+// function touchMove(event) {
+//   //event.preventDefault();
+//   offset = {};
+//   // console.log("start" + start.y);
+//   offset = start.y - event.touches[0].clientY;
+//   return offset;
+// }
 
 (function () {
   init();
@@ -89,18 +125,43 @@ console.log(eventName);
     }
 
     if (g_canScrollHorizontally && eventName == "touchmove") {
-      var startX, startY;
-      window.addEventListener("touchstart", (evt) => {
-        startX = evt.touches[0].clientX;
-        startY = evt.touches[0].clientY;
-      });
-      var deltaX = evt.touches[0].clientX - startX,
-        deltaY = evt.touches[0].clientY - startY;
-      console.log("Delta x,y", deltaX, deltaY);
+      // console.log(containerInViewPort.querySelector("main").scrollLeft);
+      // window.addEventListener("touchstart", touchStart, false);
+      // window.addEventListener("touchmove", touchMove, false);
+      // let start = {y: 0};
+      // function touchStart(event) {
+      //   start.y = event.touches[0].clientY;
+      // }
+      // function touchMove(event) {
+      //   event.preventDefault();
+      //   offset = {};
+      //   console.log("start" + start.y);
+      //   offset = start.y - event.touches[0].clientY;
+      //   return offset;
+      // }
+      // console.log(start.y);
+
+      offset = {};
+      // console.log("start" + start.y);
+      offset = start.y - evt.touches[0].clientY;
+      console.log(offset);
+      started += offset / 10;
+      console.log(started + "  started");
+      containerInViewPort.querySelector("main").scrollLeft += started;
+      // console.log(containerInViewPort.querySelector("main").scrollLeft);
     }
   }
 })();
 
+// let start = {y: 0};
+
+// window.addEventListener("touchstart", touchStart, false);
+// function touchStart(event) {
+//   // start.x = event.touches[0].clientX;
+//   start.y = event.touches[0].clientY;
+//   // console.log("start" + start.y);
+// }
+// console.log(start.y);
 //
 //
 //
