@@ -119,14 +119,17 @@ function touchStart(event) {
 
 window.addEventListener("scroll", function () {
   // console.log(window.pageYOffset);
-  if (window.pageYOffset >= 2300) {
+  if (window.pageYOffset > 2300 && window.pageYOffset <= 2320) {
     //&& window.pageYOffset <= 3525
     console.log("visible");
-    //console.log(window.pageYOffset);
+    console.log(window.pageYOffset);
     document.body.style.overflow = "hidden";
     setTimeout(() => {
       document.body.style.overflow = "visible";
     }, 1000);
+  }
+  if (window.pageYOffset >= 3501) {
+    document.body.style.overflow = "visible";
   }
 });
 
