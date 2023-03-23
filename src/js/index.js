@@ -27,16 +27,26 @@ function touchStart(event) {
       .querySelectorAll(".sticky-container")
       .forEach(function (container) {
         const stikyContainerHeight =
-          container.querySelector("main").scrollWidth;
+          container.querySelector("main").scrollWidth * 0.8;
+        // console.log(container.querySelector("main").scrollWidth);
         container.setAttribute(
           "style",
           "height: " + stikyContainerHeight + "px"
         );
+        console.log(stikyContainerHeight + " stikyContainerHeight");
       });
   }
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
+    //console.log(rect.top + " rect.top");
+    // console.log(rect.bottom + " rect.bottom");
+    // console.log(
+    //   document.documentElement.clientHeight +
+    //     " document.documentElement.clientHeight"
+    // );
+    // return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight; рабочее на компе
+
     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
   }
 
@@ -57,6 +67,7 @@ function touchStart(event) {
     let isPlaceHolderBelowBottom =
       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
       document.documentElement.scrollTop;
+    //console.log(isPlaceHolderBelowBottom);
 
     let g_canScrollHorizontally =
       isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
@@ -66,16 +77,42 @@ function touchStart(event) {
     }
 
     if (g_canScrollHorizontally && eventName == "touchmove") {
+      // window.onscroll = () => window.scroll(0, 0);
+      //рабочее
       offset = {};
       offset = start.y - evt.touches[0].clientY;
-      started += offset / 20;
-      console.log(started + "  started");
+      // console.log(offset);
+      started += (offset / 20) * 0.8;
+
       containerInViewPort.querySelector("main").scrollLeft += started;
-      console.log(containerInViewPort.querySelector("main").scrollLeft);
+      // console.log(started);
+      // containerInViewPort.querySelector("main").scrollLeft += started;
+      // console.log(containerInViewPort.querySelector("main").scrollLeft);
     }
   }
 })();
+// window.addEventListener("scroll", function () {
+//   if (window.pageYOffset >= rect.top) {
+//     console.log(window.pageYOffset);
+//   }
+// });
+//console.log(rect.top + " rect.top");
 
+//console.log(document.querySelector(".sticky-container").scrollHeight);
+
+//console.log(document.querySelector("main").scrollLeft);
+
+// document.addEventListener("touchstart", function (e) {
+//   console.log("Touch start:", e.touches[0].clientX, e.touches[0].clientY);
+// });
+
+// document.addEventListener("touchmove", function (e) {
+//   console.log(
+//     "Touch move:",
+//     e.changedTouches[0].clientX,
+//     e.changedTouches[0].clientY
+//   );
+// });
 //
 //
 //
