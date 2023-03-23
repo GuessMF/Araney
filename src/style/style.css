@@ -18,7 +18,7 @@
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
   background-color: #ffffff;
 }
-@media (max-width: 1020px) {
+@media (max-width: 1040px) {
   .header .navbar {
     display: block;
   }
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 62px;
+  height: 80px;
 }
 .header .navbar .menu-items {
   display: flex;
@@ -195,7 +195,7 @@
     justify-content: center;
   }
 }
-@media (max-width: 1020px) {
+@media (max-width: 1040px) {
   .header .header__wrapper {
     display: none;
   }
@@ -261,6 +261,7 @@
   background: linear-gradient(103.2deg, #14213d 0%, #28427b 111.47%);
   border: none;
   margin: 0 auto;
+  margin-top: 10px;
 }
 @media (max-width: 1439px) {
   .welcome-screen {
@@ -742,10 +743,20 @@ content .about-us__partners img {
   background-color: #14213d;
   margin-top: 100px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1040px) {
+  .how-we-work section {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 950px) {
   .how-we-work section {
     min-width: 100%;
   }
+}
+.how-we-work section .steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .how-we-work section .how-we-work__block {
   margin-left: 100px;
@@ -753,13 +764,11 @@ content .about-us__partners img {
   margin-top: -100px;
   height: 75%;
   width: 65%;
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
 }
-@media (max-width: 1100px) {
-  .how-we-work section .how-we-work__block {
-    width: 50%;
-  }
-}
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .how-we-work section .how-we-work__block {
     width: 80%;
   }
@@ -827,6 +836,7 @@ content .about-us__partners img {
 }
 .how-we-work section .steps img {
   width: 60%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -1190,6 +1200,9 @@ content .about-us__partners img {
   display: flex;
   flex-direction: row;
   justify-content: end;
+}
+.selected-cases__content .selected-cases__wrapper .selected-cases__logo img {
+  width: 112px;
 }
 @media (max-width: 650px) {
   .selected-cases__content .selected-cases__wrapper .selected-cases__logo img {
@@ -1591,6 +1604,9 @@ content .about-us__partners img {
   background-color: #14213d;
   cursor: pointer;
 }
+.selected-cases__content .selected-cases__bottom_content .selected-cases__add img {
+  width: 27px;
+}
 @media (max-width: 1280px) {
   .selected-cases__content .selected-cases__bottom_content .selected-cases__add {
     width: 44vw;
@@ -1664,6 +1680,9 @@ content .about-us__partners img {
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
+}
+.discuss .discuss__wrapper .discuss__left-box img {
+  width: 458px;
 }
 @media (max-width: 1280px) {
   .discuss .discuss__wrapper .discuss__left-box {

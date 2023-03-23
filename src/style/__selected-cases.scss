@@ -73,6 +73,10 @@
       display: flex;
       flex-direction: row;
       justify-content: end;
+      img {
+        width: 112px;
+      }
+
       @media (max-width: 650px) {
         img {
           width: 25%;
@@ -414,6 +418,9 @@
       margin-top: 16px;
       background-color: $secondary;
       cursor: pointer;
+      img {
+        width: 27px;
+      }
       @media (max-width: 1280px) {
         width: 44vw;
         margin: 20px auto;
