@@ -39,14 +39,17 @@ function touchStart(event) {
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
-    //console.log(rect.top + " rect.top");
-    // console.log(rect.bottom + " rect.bottom");
-    // console.log(
-    //   document.documentElement.clientHeight +
-    //     " document.documentElement.clientHeight"
-    // );
-    // return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight; рабочее на компе
-    //  console.log("hello");
+    if (rect.top < 0) {
+      //  console.log("hello");
+      // document.body.style.overflow = "hidden";
+      // el.addEventListener(
+      //   "touchmove",
+      //   function (e) {
+      //     e.stopPropagation();
+      //   },
+      //   {passive: false}
+      // );
+    }
     return rect.top <= 0 && rect.bottom > document.documentElement.clientHeight;
   }
 
@@ -73,13 +76,13 @@ function touchStart(event) {
     let isPlaceHolderBelowBottom =
       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
       document.documentElement.scrollTop;
-    //console.log(isPlaceHolderBelowBottom);
 
     let g_canScrollHorizontally =
       isPlaceHolderBelowTop && isPlaceHolderBelowBottom;
 
     if (g_canScrollHorizontally) {
       containerInViewPort.querySelector("main").scrollLeft += evt.deltaY;
+      // console.log("stop scroll");
     }
 
     if (g_canScrollHorizontally && eventName == "touchmove") {
@@ -97,29 +100,36 @@ function touchStart(event) {
     }
   }
 })();
+// let item = document.querySelector(".sticky-container");
 
-// window.addEventListener("scroll", function () {
-//   if (window.pageYOffset >= rect.top) {
-//     console.log(window.pageYOffset);
-//   }
-// });
-//console.log(rect.top + " rect.top");
-
-//console.log(document.querySelector(".sticky-container").scrollHeight);
-
-//console.log(document.querySelector("main").scrollLeft);
-
-// document.addEventListener("touchstart", function (e) {
-//   console.log("Touch start:", e.touches[0].clientX, e.touches[0].clientY);
+// const rect = item.getBoundingClientRect();
+// console.log(rect.top);
+// document.addEventListener("scroll", () => {
+//   console.log(window.pageYOffset);
+//   // document.body.style.overflow = "hidden";
 // });
 
-// document.addEventListener("touchmove", function (e) {
-//   console.log(
-//     "Touch move:",
-//     e.changedTouches[0].clientX,
-//     e.changedTouches[0].clientY
-//   );
-// });
+// document.getElementById("how-we-work").addEventListener(
+//   "touchmove",
+//   function (event) {
+//     event.preventDefault();
+//   },
+//   false
+// );
+
+window.addEventListener("scroll", function () {
+  // console.log(window.pageYOffset);
+  if (window.pageYOffset >= 2300) {
+    //&& window.pageYOffset <= 3525
+    console.log("visible");
+    //console.log(window.pageYOffset);
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      document.body.style.overflow = "visible";
+    }, 1000);
+  }
+});
+
 //
 //
 //
