@@ -112,6 +112,7 @@ function touchStart(event) {
 
     let isPlaceHolderBelowTop =
       containerInViewPort.offsetTop < document.documentElement.scrollTop;
+    // console.log(isPlaceHolderBelowTop + "isPlaceHolderBelowTop");
 
     let isPlaceHolderBelowBottom =
       containerInViewPort.offsetTop + containerInViewPort.offsetHeight >
@@ -122,15 +123,16 @@ function touchStart(event) {
 
     if (g_canScrollHorizontally) {
       containerInViewPort.querySelector("main").scrollLeft += evt.deltaY;
+      console.log(containerInViewPort.querySelector("main").scrollLeft);
     }
 
     if (g_canScrollHorizontally && eventName == "touchmove") {
       offset = {};
 
       offset = start.y - evt.touches[0].clientY;
-      console.log(offset);
+      // console.log(offset);
       started += offset / 10;
-      console.log(started + "  started");
+      // console.log(started + "  started");
       containerInViewPort.querySelector("main").scrollLeft += started;
     }
   }
