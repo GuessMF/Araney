@@ -97,18 +97,36 @@ function touchStart(event) {
 //   false
 // );
 
+// window.addEventListener("scroll", function () {
+//   if (window.pageYOffset) {
+//     //&& window.pageYOffset <= 3525
+//     console.log("visible");
+//     console.log(window.pageYOffset);
+//     // document.body.style.overflow = "hidden";
+//     // setTimeout(() => {
+//     //   document.body.style.overflow = "visible";
+//     // }, 1000);
+//   }
+// });
+
+const elem = document.querySelector(".parent"), // находим элемент по id
+  // info = document.getElementById("info"), // находим элемент по id
+  domRect = elem.getBoundingClientRect();
+console.log(domRect.y - 80);
+
 window.addEventListener("scroll", function () {
-  if (window.pageYOffset) {
+  console.log(window.pageYOffset);
+  if (window.pageYOffset >= domRect.y - 80) {
     //&& window.pageYOffset <= 3525
     console.log("visible");
-    console.log(window.pageYOffset);
+    document.body.style.overflow = "hidden";
+
     // document.body.style.overflow = "hidden";
     // setTimeout(() => {
     //   document.body.style.overflow = "visible";
     // }, 1000);
   }
 });
-
 //
 //
 //

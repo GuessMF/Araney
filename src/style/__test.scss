@@ -1,0 +1,30 @@
+.parent {
+  width: 1440px;
+  width: 90vw;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+
+.test {
+  //   border: black 1x solid;
+  //   width: 100vw;
+  //   max-width: 900px;
+  //   height: 600px;
+  //   background-color: antiquewhite;
+  //   display: flex;
+  //   flex-direction: row;
+  //   overflow-x: scroll;
+  background-color: #fff;
+  min-width: 100%;
+  min-height: 200px;
+  display: flex;
+  overflow-x: auto;
+}
+.test__wrapper {
+  //   border: black 1px solid;
+  //   width: 600px;
+  //   height: 100%;
+  background-color: #e74c3c;
+  min-width: 500px;
+  margin: 5px;
+}

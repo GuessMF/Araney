@@ -261,7 +261,6 @@
   background: linear-gradient(103.2deg, #14213d 0%, #28427b 111.47%);
   border: none;
   margin: 0 auto;
-  margin-top: 10px;
 }
 @media (max-width: 1439px) {
   .welcome-screen {
@@ -2030,6 +2029,27 @@ content .about-us__partners img {
 .footer .footer__wrapper .footer__bottom .footer__year p {
   color: #cccccc;
   font-size: 16px;
+}
+
+.parent {
+  width: 1440px;
+  width: 90vw;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+
+.test {
+  background-color: #fff;
+  min-width: 100%;
+  min-height: 200px;
+  display: flex;
+  overflow-x: auto;
+}
+
+.test__wrapper {
+  background-color: #e74c3c;
+  min-width: 500px;
+  margin: 5px;
 }
 
 body,
