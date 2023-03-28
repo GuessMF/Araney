@@ -127,9 +127,15 @@ const elem = document.querySelector(".parent"), // находим элемент
 //     // }, 1000);
 //   }
 // });
+let scrollPage = 0;
+
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
 
 const options = {
-  rootMargin: "-50px 0px -50px 0%",
+  //rootMargin: "-50px 0px -50px 0%",
   // rootMargin: "100px 0px 10px 0px",
   threshold: 1,
 };
@@ -137,43 +143,30 @@ const options = {
 const trueCallback = function (entries, observer) {
   entries.forEach((entry) => {
     const {isIntersecting} = entry;
-    // console.log(isIntersecting);
+    console.log(isIntersecting);
+    console.log(scrollPage);
     if (isIntersecting) {
-      //console.log("stop");
+      console.log("stop");
+      document.body.style.overflow = "hidden";
+      window.addEventListener(
+        "touchend",
+        function (event) {
+          touchendX = event.changedTouches[0].screenX;
+          touchendY = event.changedTouches[0].screenY;
+          handleGesture();
+        },
+        false
+      );
     } else {
-      //console.log("scroll");
+      preventDefault();
     }
   });
 };
-
-// window.addEventListener("touchstart", (e) => {
-//   console.log(e.isTrusted);
-//   if (e.isTrusted) {
-//   }
-// });
-window.addEventListener("swipe", (e) => {
-  // console.log(e);
-  //console.log("pum pum");
-});
 
 function stopScrollPage() {}
 const observer = new IntersectionObserver(trueCallback, options);
 
 observer.observe(elem);
-
-//
-//
-//
-//
-//
-//
-//
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
-
-//const gestureZone = document.getElementById('modalContent');
 
 window.addEventListener(
   "touchstart",
@@ -183,24 +176,28 @@ window.addEventListener(
   },
   false
 );
-
-window.addEventListener(
-  "touchend",
-  function (event) {
-    touchendX = event.changedTouches[0].screenX;
-    touchendY = event.changedTouches[0].screenY;
-    handleGesture();
-  },
-  false
-);
+// window.addEventListener(
+//   "touchend",
+//   function (event) {
+//     touchendX = event.changedTouches[0].screenX;
+//     touchendY = event.changedTouches[0].screenY;
+//     handleGesture();
+//   },
+//   false
+// );
 
 let scrollWay;
 elem.style.overflow = "hidden";
-document.body.style.overflow = "hidden";
 
-let scrollPage = 0;
 // let tests = document.querySelectorAll(".test__wrapper");
 let tests = document.querySelectorAll(".anchor");
+
+function checkUnlockDisplay() {
+  // console.log(scrollPage);
+  scrollPage == 4
+    ? (document.body.style.overflow = "visible")
+    : console.log("not else");
+}
 
 function handleGesture() {
   if (touchendX < touchstartX) {
@@ -235,6 +232,7 @@ function handleGesture() {
         scrollPage++;
       }
       tests[scrollPage].scrollIntoView();
+      checkUnlockDisplay();
       console.log("Vverh");
       break;
     case "Down":
@@ -244,6 +242,7 @@ function handleGesture() {
         scrollPage--;
       }
       tests[scrollPage].scrollIntoView();
+      checkUnlockDisplay();
 
       console.log("Vniz");
       break;
@@ -273,6 +272,7 @@ function handleGesture() {
       break;
   }
 }
+
 function smoothScroll() {
   // let tests = document.querySelectorAll(".test__wrapper");
   // tests.forEach((el) => console.log(el));
