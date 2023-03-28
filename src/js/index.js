@@ -282,33 +282,33 @@ function smoothScroll() {
   });
 }
 
-window.addEventListener("keyup", (e) => {
-  let code = e.keyCode;
-  switch (code) {
-    case 37:
-      if (scrollPage <= 0) {
-        scrollPage = 0;
-      } else {
-        scrollPage--;
-      }
-      tests[scrollPage].scrollIntoView();
+// window.addEventListener("keyup", (e) => {
+//   let code = e.keyCode;
+//   switch (code) {
+//     case 37:
+//       if (scrollPage <= 0) {
+//         scrollPage = 0;
+//       } else {
+//         scrollPage--;
+//       }
+//       tests[scrollPage].scrollIntoView();
 
-      console.log("Vniz");
-      break;
-    case 39:
-      if (scrollPage >= 4) {
-        scrollPage = 4;
-      } else {
-        scrollPage++;
-      }
-      tests[scrollPage].scrollIntoView();
-      console.log("Vverh");
-      break;
-    default:
-      break;
-  }
-  console.log(scrollPage);
-});
+//       console.log("Vniz");
+//       break;
+//     case 39:
+//       if (scrollPage >= 4) {
+//         scrollPage = 4;
+//       } else {
+//         scrollPage++;
+//       }
+//       tests[scrollPage].scrollIntoView();
+//       console.log("Vverh");
+//       break;
+//     default:
+//       break;
+//   }
+//   console.log(scrollPage);
+// });
 
 //
 //
