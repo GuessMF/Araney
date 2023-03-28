@@ -3,6 +3,7 @@
   width: 90vw;
   margin: 0 auto;
   background-color: antiquewhite;
+  height: 80vh;
 }
 
 .test {
@@ -16,15 +17,27 @@
   //   overflow-x: scroll;
   background-color: #fff;
   min-width: 100%;
-  min-height: 200px;
+  min-height: 100%;
   display: flex;
-  overflow-x: auto;
+  //overflow-x: auto;
 }
 .test__wrapper {
   //   border: black 1px solid;
   //   width: 600px;
-  //   height: 100%;
+  //height: 100%;
   background-color: #e74c3c;
-  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 90vw;
   margin: 5px;
+  position: relative;
+  color: #fff;
+  font-size: 100px;
+  .anchor {
+    position: absolute;
+    top: -100px;
+    left: 90vw;
+  }
 }

@@ -112,21 +112,131 @@ function touchStart(event) {
 const elem = document.querySelector(".parent"), // находим элемент по id
   // info = document.getElementById("info"), // находим элемент по id
   domRect = elem.getBoundingClientRect();
-console.log(domRect.y - 80);
+//console.log(domRect.y);
 
-window.addEventListener("scroll", function () {
-  console.log(window.pageYOffset);
-  if (window.pageYOffset >= domRect.y - 80) {
-    //&& window.pageYOffset <= 3525
-    console.log("visible");
-    document.body.style.overflow = "hidden";
+// window.addEventListener("scroll", function () {
+//   //console.log(window.pageYOffset);
+//   if (window.pageYOffset >= domRect.y - 100) {
+//     //&& window.pageYOffset <= 3525
+//     //console.log("visible");
+//     //  document.body.style.overflow = "hidden";
+//     //elem.style.overflow = "scroll";
+//     // document.body.style.overflow = "hidden";
+//     // setTimeout(() => {
+//     //   document.body.style.overflow = "visible";
+//     // }, 1000);
+//   }
+// });
 
-    // document.body.style.overflow = "hidden";
-    // setTimeout(() => {
-    //   document.body.style.overflow = "visible";
-    // }, 1000);
-  }
+const options = {
+  rootMargin: "-50px 0px -50px 0%",
+  // rootMargin: "100px 0px 10px 0px",
+  threshold: 1,
+};
+
+const trueCallback = function (entries, observer) {
+  entries.forEach((entry) => {
+    const {isIntersecting} = entry;
+    // console.log(isIntersecting);
+    if (isIntersecting) {
+      //console.log("stop");
+    } else {
+      //console.log("scroll");
+    }
+  });
+};
+
+// window.addEventListener("touchstart", (e) => {
+//   console.log(e.isTrusted);
+//   if (e.isTrusted) {
+//   }
+// });
+window.addEventListener("swipe", (e) => {
+  // console.log(e);
+  //console.log("pum pum");
 });
+
+function stopScrollPage() {}
+const observer = new IntersectionObserver(trueCallback, options);
+
+observer.observe(elem);
+
+//
+//
+//
+//
+//
+//
+//
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+//const gestureZone = document.getElementById('modalContent');
+
+window.addEventListener(
+  "touchstart",
+  function (event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+  },
+  false
+);
+
+window.addEventListener(
+  "touchend",
+  function (event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+  },
+  false
+);
+
+let scrollPage = 1;
+elem.style.overflow = "hidden";
+//document.body.style.overflow = "hidden";
+
+function handleGesture() {
+  if (touchendX < touchstartX) {
+    console.log("Swiped left");
+    smoothScrollRight();
+    scrollPage++;
+    scrollPage == 6 ? scrollPage-- : console.log("rrr");
+  }
+
+  if (touchendX > touchstartX) {
+    console.log("Swiped right");
+    smoothScrollRight();
+    scrollPage--;
+    scrollPage == 0 ? scrollPage++ : console.log("rrr");
+  }
+
+  if (touchendY < touchstartY) {
+    console.log("Swiped up");
+  }
+
+  if (touchendY > touchstartY) {
+    console.log("Swiped down");
+  }
+
+  if (touchendY === touchstartY) {
+    console.log("Tap");
+
+    // console.log(scrollPage);
+  }
+}
+function smoothScrollRight() {
+  // let tests = document.querySelectorAll(".test__wrapper");
+  // tests.forEach((el) => console.log(el));
+  console.log("#test-" + scrollPage);
+  document.querySelector("#test-" + scrollPage).scrollIntoView({
+    // behavior: "smooth",
+  });
+}
+
+//
 //
 //
 //

@@ -2036,20 +2036,32 @@ content .about-us__partners img {
   width: 90vw;
   margin: 0 auto;
   background-color: antiquewhite;
+  height: 80vh;
 }
 
 .test {
   background-color: #fff;
   min-width: 100%;
-  min-height: 200px;
+  min-height: 100%;
   display: flex;
-  overflow-x: auto;
 }
 
 .test__wrapper {
   background-color: #e74c3c;
-  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 90vw;
   margin: 5px;
+  position: relative;
+  color: #fff;
+  font-size: 100px;
+}
+.test__wrapper .anchor {
+  position: absolute;
+  top: -100px;
+  left: 90vw;
 }
 
 body,
