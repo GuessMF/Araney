@@ -194,47 +194,121 @@ window.addEventListener(
   false
 );
 
-let scrollPage = 1;
+let scrollWay;
 elem.style.overflow = "hidden";
-//document.body.style.overflow = "hidden";
+document.body.style.overflow = "hidden";
+
+let scrollPage = 0;
+let tests = document.querySelectorAll(".test__wrapper");
 
 function handleGesture() {
   if (touchendX < touchstartX) {
-    console.log("Swiped left");
-    smoothScrollRight();
-    scrollPage++;
-    scrollPage == 6 ? scrollPage-- : console.log("rrr");
+    scrollWay = "Left";
   }
 
   if (touchendX > touchstartX) {
-    console.log("Swiped right");
-    smoothScrollRight();
-    scrollPage--;
-    scrollPage == 0 ? scrollPage++ : console.log("rrr");
+    scrollWay = "Right";
   }
 
   if (touchendY < touchstartY) {
-    console.log("Swiped up");
+    scrollWay = "Up";
   }
 
   if (touchendY > touchstartY) {
-    console.log("Swiped down");
+    scrollWay = "Down";
   }
 
   if (touchendY === touchstartY) {
-    console.log("Tap");
+    // console.log("Tap");
+  }
 
-    // console.log(scrollPage);
+  // document.querySelector("#test-" + scrollPage).scrollIntoView({
+  //   // behavior: "smooth",
+  // });
+
+  switch (scrollWay) {
+    case "Up":
+      if (scrollPage >= 4) {
+        scrollPage = 4;
+      } else {
+        scrollPage++;
+      }
+      tests[scrollPage].scrollIntoView();
+      console.log("Vverh");
+      break;
+    case "Down":
+      if (scrollPage <= 0) {
+        scrollPage = 0;
+      } else {
+        scrollPage--;
+      }
+      tests[scrollPage].scrollIntoView();
+
+      console.log("Vniz");
+      break;
+    // case "Left":
+    //   if (scrollPage >= 4) {
+    //     scrollPage = 4;
+    //   } else {
+    //     scrollPage++;
+    //   }
+    //   tests[scrollPage].scrollIntoView();
+
+    //   console.log("Levo");
+    //   break;
+
+    // case "Right":
+    //   if (scrollPage <= 0) {
+    //     scrollPage = 0;
+    //   } else {
+    //     scrollPage--;
+    //   }
+    //   tests[scrollPage].scrollIntoView();
+    //   console.log("Pravo");
+    //   break;
+
+    default:
+      console.log("nothing");
+      break;
   }
 }
-function smoothScrollRight() {
+function smoothScroll() {
   // let tests = document.querySelectorAll(".test__wrapper");
   // tests.forEach((el) => console.log(el));
   console.log("#test-" + scrollPage);
+
   document.querySelector("#test-" + scrollPage).scrollIntoView({
     // behavior: "smooth",
   });
 }
+
+window.addEventListener("keyup", (e) => {
+  let code = e.keyCode;
+  switch (code) {
+    case 37:
+      if (scrollPage <= 0) {
+        scrollPage = 0;
+      } else {
+        scrollPage--;
+      }
+      tests[scrollPage].scrollIntoView();
+
+      console.log("Vniz");
+      break;
+    case 39:
+      if (scrollPage >= 4) {
+        scrollPage = 4;
+      } else {
+        scrollPage++;
+      }
+      tests[scrollPage].scrollIntoView();
+      console.log("Vverh");
+      break;
+    default:
+      break;
+  }
+  console.log(scrollPage);
+});
 
 //
 //
