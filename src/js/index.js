@@ -199,7 +199,8 @@ elem.style.overflow = "hidden";
 document.body.style.overflow = "hidden";
 
 let scrollPage = 0;
-let tests = document.querySelectorAll(".test__wrapper");
+// let tests = document.querySelectorAll(".test__wrapper");
+let tests = document.querySelectorAll(".anchor");
 
 function handleGesture() {
   if (touchendX < touchstartX) {
