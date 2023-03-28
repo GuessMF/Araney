@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "normalize.css";
 .header {
   position: fixed;
@@ -2054,9 +2055,23 @@ content .about-us__partners img {
   align-items: center;
   min-width: 90vw;
   margin: 5px;
+  border-top: 0px;
   position: relative;
   color: #fff;
   font-size: 100px;
+  position: relative; /* важно - для того, чтобы псевдоэлемент позиционировался относительно этого элемента */
+  margin-top: 100px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.test__wrapper::before {
+  content: "";
+  position: absolute;
+  top: -2px; /* равен по модулю толщине border */
+  left: 0;
+  right: 0;
+  border-top: 2px solid #ccc;
 }
 .test__wrapper .anchor {
   position: absolute;

@@ -32,9 +32,26 @@
   align-items: center;
   min-width: 90vw;
   margin: 5px;
+  border-top: 00px;
   position: relative;
   color: #fff;
   font-size: 100px;
+
+  position: relative; /* важно - для того, чтобы псевдоэлемент позиционировался относительно этого элемента */
+  //border-top: 55px solid transparent;
+  margin-top: 100px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px; /* равен по модулю толщине border */
+    left: 0;
+    right: 0;
+    border-top: 2px solid #ccc;
+  }
+
   .anchor {
     position: absolute;
     top: -100px;
