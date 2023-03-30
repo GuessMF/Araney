@@ -75,6 +75,30 @@ function touchStart(event) {
   }
 })();
 
+function mobileScroll() {
+  const howWeWork = document.querySelector("#how-we-work");
+  // const stickyContainer = document.querySelector(".sticky-container");
+  // console.log(stickyContainer);
+  const sections = document.querySelectorAll("section");
+
+  if (window.screen.width < 450) {
+    console.log("mobile");
+    howWeWork.classList.remove("how-we-work");
+    howWeWork.classList.add("how-we-work-mobile");
+    howWeWork.childNodes[1].classList.remove("sticky-container");
+    howWeWork.childNodes[1].classList.add("sections");
+
+    // console.log(howWeWork.childNodes[1].childNodes[1].querySelectorAll('section'));
+    sections.forEach((element) => {
+      console.log(element);
+      element.classList.add("section_item");
+    });
+  }
+}
+mobileScroll();
+
+//console.log(sections);
+
 //
 //
 // Нужно поймать кинетический скролл на мобильном устройстве, иначе он проскакиваем мимо нужного контейнера
