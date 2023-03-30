@@ -171,32 +171,32 @@ function touchStart(event) {
 // const observer = new IntersectionObserver(trueCallback, options);
 
 // observer.observe(elem);
-const parent = document.querySelector(".parent");
+// const parent = document.querySelector(".parent");
 
-parent.addEventListener(
-  "touchstart",
-  function (event) {
-    touchstartX = event.changedTouches[0].screenX;
-    touchstartY = event.changedTouches[0].screenY;
-  },
-  false
-);
+// parent.addEventListener(
+//   "touchstart",
+//   function (event) {
+//     touchstartX = event.changedTouches[0].screenX;
+//     touchstartY = event.changedTouches[0].screenY;
+//   },
+//   false
+// );
 
-parent.addEventListener(
-  "touchend",
-  function (event) {
-    touchendX = event.changedTouches[0].screenX;
-    touchendY = event.changedTouches[0].screenY;
-    handleGesture();
-  },
-  false
-);
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
+// parent.addEventListener(
+//   "touchend",
+//   function (event) {
+//     touchendX = event.changedTouches[0].screenX;
+//     touchendY = event.changedTouches[0].screenY;
+//     handleGesture();
+//   },
+//   false
+// );
+// let touchstartX = 0;
+// let touchstartY = 0;
+// let touchendX = 0;
+// let touchendY = 0;
 
-let scrollWay;
+// let scrollWay;
 // elem.style.overflow = "hidden";
 
 // let tests = document.querySelectorAll(".test__wrapper");

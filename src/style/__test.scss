@@ -1,7 +1,7 @@
 .parent {
   overflow-x: auto;
   height: 90vh;
-  width: 90vw;
+  width: 100vw;
   margin: 50px auto;
   scroll-snap-type: x mandatory;
   flex-wrap: nowrap;
@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   //flex: 0 0 0;
-  width: 89vw;
+  width: 100vw;
   height: 88vh;
   //padding: 20px;
   font-size: 20px;
@@ -29,7 +29,7 @@
     width: 100px;
   }
   .how-we-work__block {
-    width: 90vw;
+    width: 100vw;
   }
 }
 
