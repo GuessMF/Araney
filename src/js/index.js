@@ -139,43 +139,30 @@ const options = {
   // rootMargin: "100px 0px 10px 0px",
   threshold: 1,
 };
+document.body.style.overfow = "hidden";
+
+const testWrappers = document.querySelectorAll(".test__wrapper");
+console.log(testWrappers[0]);
 
 const trueCallback = function (entries, observer) {
   entries.forEach((entry) => {
     const {isIntersecting} = entry;
-    console.log(isIntersecting);
-    console.log(scrollPage);
+
     if (isIntersecting) {
-      console.log("stop");
-      document.body.style.overflow = "hidden";
-      window.addEventListener(
-        "touchend",
-        function (event) {
-          touchendX = event.changedTouches[0].screenX;
-          touchendY = event.changedTouches[0].screenY;
-          handleGesture();
-        },
-        false
-      );
-    } else {
-      preventDefault();
+      console.log("Need to stop");
+
+      // elem.addEventListener(
+      //   "touchstart",
+      //   function (event) {
+      //     touchstartX = event.changedTouches[0].screenX;
+      //     touchstartY = event.changedTouches[0].screenY;
+      //   },
+      //   false
+      // );
     }
   });
 };
 
-function stopScrollPage() {}
-const observer = new IntersectionObserver(trueCallback, options);
-
-observer.observe(elem);
-
-window.addEventListener(
-  "touchstart",
-  function (event) {
-    touchstartX = event.changedTouches[0].screenX;
-    touchstartY = event.changedTouches[0].screenY;
-  },
-  false
-);
 // window.addEventListener(
 //   "touchend",
 //   function (event) {
@@ -186,102 +173,123 @@ window.addEventListener(
 //   false
 // );
 
-let scrollWay;
-elem.style.overflow = "hidden";
+const observer = new IntersectionObserver(trueCallback, options);
+
+observer.observe(elem);
+
+// window.addEventListener(
+//   "touchend",
+//   function (event) {
+//     touchendX = event.changedTouches[0].screenX;
+//     touchendY = event.changedTouches[0].screenY;
+//     handleGesture();
+//   },
+//   false
+// );
+
+// let scrollWay;
+// elem.style.overflow = "hidden";
 
 // let tests = document.querySelectorAll(".test__wrapper");
 let tests = document.querySelectorAll(".anchor");
 
-function checkUnlockDisplay() {
-  // console.log(scrollPage);
-  scrollPage == 4
-    ? (document.body.style.overflow = "visible")
-    : console.log("not else");
-}
+// function checkUnlockDisplay() {
+//   // console.log(scrollPage);
+//   scrollPage == 4
+//     ? (document.body.style.overflow = "visible")
+//     : console.log("not else");
+// }
 
 function handleGesture() {
   if (touchendX < touchstartX) {
     scrollWay = "Left";
+    console.log("Left");
   }
 
   if (touchendX > touchstartX) {
     scrollWay = "Right";
+    console.log("Right");
   }
 
   if (touchendY < touchstartY) {
     scrollWay = "Up";
+    console.log("Up");
   }
 
   if (touchendY > touchstartY) {
     scrollWay = "Down";
+    console.log("Down");
   }
 
   if (touchendY === touchstartY) {
     // console.log("Tap");
   }
-
-  // document.querySelector("#test-" + scrollPage).scrollIntoView({
-  //   // behavior: "smooth",
-  // });
-
-  switch (scrollWay) {
-    case "Up":
-      if (scrollPage >= 4) {
-        scrollPage = 4;
-      } else {
-        scrollPage++;
-      }
-      tests[scrollPage].scrollIntoView();
-      checkUnlockDisplay();
-      console.log("Vverh");
-      break;
-    case "Down":
-      if (scrollPage <= 0) {
-        scrollPage = 0;
-      } else {
-        scrollPage--;
-      }
-      tests[scrollPage].scrollIntoView();
-      checkUnlockDisplay();
-
-      console.log("Vniz");
-      break;
-    // case "Left":
-    //   if (scrollPage >= 4) {
-    //     scrollPage = 4;
-    //   } else {
-    //     scrollPage++;
-    //   }
-    //   tests[scrollPage].scrollIntoView();
-
-    //   console.log("Levo");
-    //   break;
-
-    // case "Right":
-    //   if (scrollPage <= 0) {
-    //     scrollPage = 0;
-    //   } else {
-    //     scrollPage--;
-    //   }
-    //   tests[scrollPage].scrollIntoView();
-    //   console.log("Pravo");
-    //   break;
-
-    default:
-      console.log("nothing");
-      break;
-  }
 }
+// document.querySelector("#test-" + scrollPage).scrollIntoView({
+//   // behavior: "smooth",
+// });
 
-function smoothScroll() {
-  // let tests = document.querySelectorAll(".test__wrapper");
-  // tests.forEach((el) => console.log(el));
-  console.log("#test-" + scrollPage);
+// switch (scrollWay) {
+//   case "Up":
+//     if (scrollPage >= 4) {
+//       scrollPage = 4;
+//     } else {
+//       scrollPage++;
+//     }
+//     if (scrollPage < 4) {
+//       tests[scrollPage].scrollIntoView();
+//     }
 
-  document.querySelector("#test-" + scrollPage).scrollIntoView({
-    // behavior: "smooth",
-  });
-}
+//     console.log("Vverh");
+//     break;
+//   case "Down":
+//     if (scrollPage <= 0) {
+//       scrollPage = 0;
+//     } else {
+//       scrollPage--;
+//     }
+
+//     tests[scrollPage].scrollIntoView();
+// checkUnlockDisplay();
+
+// console.log("Vniz");
+// break;
+// case "Left":
+//   if (scrollPage >= 4) {
+//     scrollPage = 4;
+//   } else {
+//     scrollPage++;
+//   }
+//   tests[scrollPage].scrollIntoView();
+
+//   console.log("Levo");
+//   break;
+
+// case "Right":
+//   if (scrollPage <= 0) {
+//     scrollPage = 0;
+//   } else {
+//     scrollPage--;
+//   }
+//   tests[scrollPage].scrollIntoView();
+//   console.log("Pravo");
+//   break;
+
+//     default:
+//       // console.log("nothing");
+//       break;
+//   }
+// }
+
+// function smoothScroll() {
+//   // let tests = document.querySelectorAll(".test__wrapper");
+//   // tests.forEach((el) => console.log(el));
+//   console.log("#test-" + scrollPage);
+
+//   document.querySelector("#test-" + scrollPage).scrollIntoView({
+//     // behavior: "smooth",
+//   });
+// }
 
 // window.addEventListener("keyup", (e) => {
 //   let code = e.keyCode;
