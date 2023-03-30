@@ -2032,20 +2032,25 @@ content .about-us__partners img {
 }
 
 .parent {
-  overflow-y: auto;
+  overflow-x: auto;
   height: 90vh;
-  width: 100%;
+  width: 90vw;
   margin: 50px auto;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: x mandatory;
+  flex-wrap: nowrap;
+}
+
+.sections {
+  display: flex;
+  flex-direction: row;
 }
 
 .section_item {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0 0 300px;
+  width: 89vw;
   height: 88vh;
-  padding: 20px;
   font-size: 20px;
   scroll-snap-align: start;
   background-color: #14213d;
@@ -2053,6 +2058,9 @@ content .about-us__partners img {
 }
 .section_item img {
   width: 100px;
+}
+.section_item .how-we-work__block {
+  width: 90vw;
 }
 
 .item1 {
