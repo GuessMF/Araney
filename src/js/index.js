@@ -129,11 +129,6 @@ function touchStart(event) {
 // });
 // let scrollPage = 0;
 
-// let touchstartX = 0;
-// let touchstartY = 0;
-// let touchendX = 0;
-// let touchendY = 0;
-
 // const options = {
 //   //rootMargin: "-50px 0px -50px 0%",
 //   // rootMargin: "100px 0px 10px 0px",
@@ -176,18 +171,32 @@ function touchStart(event) {
 // const observer = new IntersectionObserver(trueCallback, options);
 
 // observer.observe(elem);
+const parent = document.querySelector(".parent");
 
-// window.addEventListener(
-//   "touchend",
-//   function (event) {
-//     touchendX = event.changedTouches[0].screenX;
-//     touchendY = event.changedTouches[0].screenY;
-//     handleGesture();
-//   },
-//   false
-// );
+parent.addEventListener(
+  "touchstart",
+  function (event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+  },
+  false
+);
 
-// let scrollWay;
+parent.addEventListener(
+  "touchend",
+  function (event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+  },
+  false
+);
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+let scrollWay;
 // elem.style.overflow = "hidden";
 
 // let tests = document.querySelectorAll(".test__wrapper");
@@ -201,17 +210,18 @@ function touchStart(event) {
 // }
 
 // function handleGesture() {
-//   if (touchendX < touchstartX) {
-//     scrollWay = "Left";
-//     console.log("Left");
-//   }
+//   // if (touchendX < touchstartX) {
+//   //   scrollWay = "Left";
+//   //   console.log("Left");
+//   // }
 
-//   if (touchendX > touchstartX) {
-//     scrollWay = "Right";
-//     console.log("Right");
-//   }
+//   // if (touchendX > touchstartX) {
+//   //   scrollWay = "Right";
+//   //   console.log("Right");
+//   // }
 
 //   if (touchendY < touchstartY) {
+//     parent.scroll(200, 0);
 //     scrollWay = "Up";
 //     console.log("Up");
 //   }
@@ -248,7 +258,7 @@ function touchStart(event) {
 //     } else {
 //       scrollPage--;
 //     }
-
+// }
 //     tests[scrollPage].scrollIntoView();
 // checkUnlockDisplay();
 
