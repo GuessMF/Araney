@@ -109,9 +109,9 @@ function touchStart(event) {
 //   }
 // });
 
-const elem = document.querySelector(".parent"), // находим элемент по id
-  // info = document.getElementById("info"), // находим элемент по id
-  domRect = elem.getBoundingClientRect();
+// const elem = document.querySelector(".parent"), // находим элемент по id
+//   // info = document.getElementById("info"), // находим элемент по id
+//   domRect = elem.getBoundingClientRect();
 //console.log(domRect.y);
 
 // window.addEventListener("scroll", function () {
@@ -127,41 +127,41 @@ const elem = document.querySelector(".parent"), // находим элемент
 //     // }, 1000);
 //   }
 // });
-let scrollPage = 0;
+// let scrollPage = 0;
 
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
+// let touchstartX = 0;
+// let touchstartY = 0;
+// let touchendX = 0;
+// let touchendY = 0;
 
-const options = {
-  //rootMargin: "-50px 0px -50px 0%",
-  // rootMargin: "100px 0px 10px 0px",
-  threshold: 1,
-};
-document.body.style.overfow = "hidden";
+// const options = {
+//   //rootMargin: "-50px 0px -50px 0%",
+//   // rootMargin: "100px 0px 10px 0px",
+//   threshold: 1,
+// };
+// document.body.style.overfow = "hidden";
 
-const testWrappers = document.querySelectorAll(".test__wrapper");
-console.log(testWrappers[0]);
+// const testWrappers = document.querySelectorAll(".test__wrapper");
+// console.log(testWrappers[0]);
 
-const trueCallback = function (entries, observer) {
-  entries.forEach((entry) => {
-    const {isIntersecting} = entry;
+// const trueCallback = function (entries, observer) {
+//   entries.forEach((entry) => {
+//     const {isIntersecting} = entry;
 
-    if (isIntersecting) {
-      console.log("Need to stop");
+//     if (isIntersecting) {
+//       console.log("Need to stop");
 
-      // elem.addEventListener(
-      //   "touchstart",
-      //   function (event) {
-      //     touchstartX = event.changedTouches[0].screenX;
-      //     touchstartY = event.changedTouches[0].screenY;
-      //   },
-      //   false
-      // );
-    }
-  });
-};
+// elem.addEventListener(
+//   "touchstart",
+//   function (event) {
+//     touchstartX = event.changedTouches[0].screenX;
+//     touchstartY = event.changedTouches[0].screenY;
+//   },
+//   false
+// );
+//     }
+//   });
+// };
 
 // window.addEventListener(
 //   "touchend",
@@ -173,9 +173,9 @@ const trueCallback = function (entries, observer) {
 //   false
 // );
 
-const observer = new IntersectionObserver(trueCallback, options);
+// const observer = new IntersectionObserver(trueCallback, options);
 
-observer.observe(elem);
+// observer.observe(elem);
 
 // window.addEventListener(
 //   "touchend",
@@ -191,7 +191,7 @@ observer.observe(elem);
 // elem.style.overflow = "hidden";
 
 // let tests = document.querySelectorAll(".test__wrapper");
-let tests = document.querySelectorAll(".anchor");
+//let tests = document.querySelectorAll(".anchor");
 
 // function checkUnlockDisplay() {
 //   // console.log(scrollPage);
@@ -200,31 +200,31 @@ let tests = document.querySelectorAll(".anchor");
 //     : console.log("not else");
 // }
 
-function handleGesture() {
-  if (touchendX < touchstartX) {
-    scrollWay = "Left";
-    console.log("Left");
-  }
+// function handleGesture() {
+//   if (touchendX < touchstartX) {
+//     scrollWay = "Left";
+//     console.log("Left");
+//   }
 
-  if (touchendX > touchstartX) {
-    scrollWay = "Right";
-    console.log("Right");
-  }
+//   if (touchendX > touchstartX) {
+//     scrollWay = "Right";
+//     console.log("Right");
+//   }
 
-  if (touchendY < touchstartY) {
-    scrollWay = "Up";
-    console.log("Up");
-  }
+//   if (touchendY < touchstartY) {
+//     scrollWay = "Up";
+//     console.log("Up");
+//   }
 
-  if (touchendY > touchstartY) {
-    scrollWay = "Down";
-    console.log("Down");
-  }
+//   if (touchendY > touchstartY) {
+//     scrollWay = "Down";
+//     console.log("Down");
+//   }
 
-  if (touchendY === touchstartY) {
-    // console.log("Tap");
-  }
-}
+//   if (touchendY === touchstartY) {
+//     // console.log("Tap");
+//   }
+// }
 // document.querySelector("#test-" + scrollPage).scrollIntoView({
 //   // behavior: "smooth",
 // });
