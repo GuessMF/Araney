@@ -1,5 +1,5 @@
 .parent {
-  overflow-x: auto;
+  overflow-y: auto;
   height: 90vh;
   width: 100%;
   margin: 50px auto;
@@ -8,13 +8,20 @@
 
 .section_item {
   display: flex;
+
   justify-content: center;
   align-items: center;
   flex: 0 0 300px;
-  height: 300px;
+  height: 90vh;
   padding: 20px;
   font-size: 20px;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-color: #5ccccc;
+  border: black 2px solid;
+  img {
+    width: 100px;
+  }
 }
 
 .item1 {
