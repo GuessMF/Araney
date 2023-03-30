@@ -16,7 +16,8 @@
   font-size: 20px;
   scroll-snap-align: start;
   //scroll-snap-stop: always;
-  background-color: #5ccccc;
+
+  background-color: $secondary;
   border: black 2px solid;
   img {
     width: 100px;
